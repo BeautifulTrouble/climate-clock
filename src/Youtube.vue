@@ -10,12 +10,11 @@
 <script>
 export default {
   props: {
-    'videoId': String
+    'videoId': {type: String, default: null}
   },
   data: () => ({
-    'videoId': this.videoId || null,
-    'youtubeCallbackName': 'onYouTubeIframeAPIReady',
-    'youtubeExistsFlag': '$isYoutubeFrameAPIReady'
+    youtubeCallbackName: 'onYouTubeIframeAPIReady',
+    youtubeExistsFlag: '$isYoutubeFrameAPIReady',
   }),
   computed: {
     youtubeVideoID() {
