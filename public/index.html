@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>climate-clock</title>
+
   </head>
   <body>
     <noscript>
@@ -13,5 +14,14 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script src="https://sirlo.in/widget.js" async></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148327680-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-148327680-1');
+    </script>
   </body>
 </html>

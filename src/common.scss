@@ -1,0 +1,138 @@
+
+// Breakpoints
+@import 'breakpoint-sass/stylesheets/_breakpoint.scss';
+$lg-width: 1280px;
+$md-width: 960px;
+$md-plus-width: $md-width + (($lg-width - $md-width) / 2);
+$sm-width: 0px; // real min-width might be 480px
+$lg: $lg-width;
+$md: $md-width $lg-width - 1px;
+$md-plus: $md-plus-width $lg-width - 1px;
+$sm: $sm-width $md-width - 1px;
+$upper: $md-width;
+$lower: $sm-width $lg-width - 1px;
+
+// Grid system
+$outer-margin: 0;
+$gutter-width: 8px;
+$breakpoints:
+    sm 0px $md-width - 1px,
+    md $md-width $lg-width - 1px,
+    md-plus $md-width + (($lg-width - $md-width) / 2) $lg-width - 1px,
+    lg $lg-width 10000px;
+$flexboxgrid-max-width: 1280px - $gutter-width;
+@import 'flexboxgrid-sass/flexboxgrid.scss';
+
+// Augment the grid system with a couple missing features
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $size: nth($breakpoint, 2);
+  $container: nth($breakpoint, 3);
+  @media only screen and (min-width: $size) {
+    .hide-#{$name}-up {
+      display: none !important;
+    }
+    .col-#{$name}-offset-0 {
+      @include flexboxgrid-sass-col-common;
+      margin-left: 0;
+    }
+  }
+}
+.hide-sm {
+  @media only screen and (max-width: $md-width - 1px) {
+    display: none !important;
+  }
+}
+
+// Theme
+/*
+@font-face {
+  font-family: Gotham;
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/gotham-medium.woff') format('woff');
+}
+@font-face {
+  font-family: Gotham;
+  font-weight: 700;
+  font-style: normal;
+  src: url('/fonts/gotham-bold.woff') format('woff');
+}
+*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:600,800&display=swap');
+$accent: #f51a25;
+$secondary: #b0d155;
+$dark: #231f20;
+$light: #8d8c91;
+$text: #080808;
+
+// Utilities
+.button {
+  cursor: pointer;
+  padding: .4rem 1rem .3rem 1rem;
+  margin: 1rem 0;
+  color: white;
+  text-transform: uppercase;
+  background-color: $accent;
+  font-weight: normal;
+  transition: all .2s ease-in-out;
+  @include breakpoint($upper) {
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  color: $text;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  margin: 0 auto;
+  @include breakpoint($sm) {
+    margin: 0 1rem;
+  }
+}
+a {
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, .button {
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+h1 {
+  font-size: 4.8rem;
+  font-weight: 800;
+  margin: 0;
+  padding: 4rem 0 1.5rem 0;
+  line-height: 1;
+  text-shadow: .5px 0 1px $light;
+  @include breakpoint($sm) {
+    font-size: 3.5rem;
+    line-height: .85;
+    text-align: left;
+    padding-bottom: 4rem;
+  }
+}
+h2 {
+  margin: 1rem 0;
+  font-size: 1.85rem;
+  font-weight: normal;
+  @include breakpoint($md) {
+    font-size: 1.35rem;
+  }
+  @include breakpoint($md-plus) {
+    font-size: 1.60rem;
+  }
+}
+h3 {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
