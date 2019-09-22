@@ -27,8 +27,8 @@ cp -a dist site
 git submodule init
 git submodule update
 cd climate-clock-widget
-yarn install
-yarn build
+$yarn install
+$yarn build
 cd ../site
 ln -s ../climate-clock-widget/dist/widget-v1.js
 ln -s ../climate-clock-widget/dist/widget-v1.js.map
