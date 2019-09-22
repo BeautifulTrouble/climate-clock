@@ -16,7 +16,7 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {path: '/', component: Page},
-    {path: '/:page(science|make|about)', component: Page},
+    {path: '/:page(about|make|science)', component: Page},
   ]
 })
 
@@ -27,6 +27,9 @@ Vue.mixin({
   methods: {
     markdown(string) {
       return converter.makeHtml(string)
+    },
+    local(link) {
+      return !/^http/.test(link)
     },
   },
 })

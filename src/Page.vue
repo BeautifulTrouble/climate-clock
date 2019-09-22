@@ -1,51 +1,53 @@
 <template>
-  <main>
-    <!-- Home -->
-    <article v-if="!page">
-      <section id="cta">
-        <div class="row">
-          <div class="col-sm-12 col-md-4" v-for="(cta, index) in content.cta_sections" :key="index">
-            <div :class="['cta', 'cta-' + index]">
-              <h3>{{ cta.title }}</h3>
-              <div v-html="markdown(cta.content)"></div>
-              <!-- sm buttons -->
-              <router-link v-if="local(cta.button_link)" :to="cta.button_link" class="button hide-md-up">{{ cta.button }}</router-link> 
-              <a v-if="!local(cta.button_link)" class="button hide-md-up" :href="cta.button_link" target="_blank">{{ cta.button }}</a>
+  <article>
+    <section id="clocks">
+      <div class="row">
+        <div class="col-sm-12 col-md-4" v-for="(clock, index) in content.clocks" :key="index">
+          <figure class="clock" :style="{backgroundImage: 'url(/img/' + clock.image}">
+            <figcaption>{{ clock.title }}</figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-12">
+          <h2>{{ content.cta }}</h2>
+        </div>
+      </div>
+    </section>
+    <section id="cta">
+      <div class="row">
+        <div v-for="(p, i) in content.pages" :key="i" class="col-sm-12 col-md-4">
+          <div :class="['cta', 'cta-' + i]">
+            <h3>{{ p.title }}</h3>
+            <div v-html="markdown(p.cta)"></div>
+            <!-- sm buttons -->
+            <router-link v-if="local(p.button_link)" :to="p.button_link" class="button hide-md-up">{{ p.button }}</router-link> 
+            <a v-if="!local(p.button_link)" class="button hide-md-up" :href="p.button_link" target="_blank">{{ p.button }}</a>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4" v-for="(p, i) in content.pages" :key="100 + i">
+          <div :class="['cta', 'cta-' + i]">
+            <!-- md lg buttons -->
+            <router-link v-if="local(p.button_link)" :to="p.button_link" class="button hide-sm">{{ p.button }}</router-link> 
+            <a v-if="!local(p.button_link)" class="button hide-sm" :href="p.button_link" target="_blank">{{ p.button }}</a>
+          </div>
+        </div>
+      </div>
+      <transition name="fade">
+        <!-- Here are the page-specific overlays -->
+        <div v-if="page != 'home'" class="overlay">
+          <router-link to="/" class="button close">x</router-link>
+          <div v-for="(p, i) in content.pages" :key="i">
+            <div v-if="page == p.button_link" class="row">
+              <h2>{{ p.button }}</h2>
+              <div v-if="p.content" v-html="markdown(p.content)" class="col-sm-12"></div>
+              <div v-if="p.content1" v-html="markdown(p.content1)" class="col-sm-12 col-md-4"></div>
+              <div v-if="p.content2" v-html="markdown(p.content2)" class="col-sm-12 col-md-4"></div>
+              <div v-if="p.content3" v-html="markdown(p.content3)" class="col-sm-12 col-md-4"></div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-4" v-for="(cta, index) in content.cta_sections" :key="100 + index">
-            <div :class="['cta', 'cta-' + index]">
-              <!-- md lg buttons -->
-              <router-link v-if="local(cta.button_link)" :to="cta.button_link" class="button hide-sm">{{ cta.button }}</router-link> 
-              <a v-if="!local(cta.button_link)" class="button hide-sm" :href="cta.button_link" target="_blank">{{ cta.button }}</a>
-            </div>
-          </div>
         </div>
-      </section>
-    </article>
-
-    <!-- Science -->
-    <article v-if="page == 'science'">
-      <section id="clocks">
-        <div class="row">
-          <div class="col-sm-12">
-            <h2>SCIENCE</h2>
-          </div>
-        </div>
-      </section>
-    </article>
-
-    <!-- Make -->
-    <article v-if="page == 'make'">
-      <section id="clocks">
-        <div class="row">
-          <div class="col-sm-12">
-            <h2>MAKE</h2>
-          </div>
-        </div>
-      </section>
-    </article>
-  </main>
+      </transition>
+    </section>
+  </article>
 </template>
 
 <script>
@@ -56,15 +58,22 @@ export default {
     content: content,
   }),
   computed: {
-    page() {
-      console.log(this.$route.params)
-      return this.$route.params.page || null
+    page() { return this.$route.params.page || 'home' },
+  },
+  watch: {
+    '$route.params.page' (newPage, oldPage) {
+      this.page = newPage ? newPage : 'home'
+      if (this.page != 'home') {
+        console.log('gottascroll')
+      }
     },
   },
   methods: {
-    local(link) {
-      return !/^http/.test(link)
-    },
+  },
+  mounted() {
+    if (this.$route.params.page) {
+
+    }
   },
 }
 </script>
@@ -74,11 +83,46 @@ export default {
 
 article {
   @include breakpoint($upper) {
-    min-height: 30rem;
+    //min-height: 30rem;
+  }
+}
+#clocks {
+  figure {
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 72%;
+    position: relative;
+    padding-bottom: $gutter-width;
+    @include breakpoint($sm) {
+      margin-bottom: 1rem;
+    }
+  }
+  figcaption {
+    text-transform: uppercase;
+    font-weight: 800;
+    position: absolute;
+    top: 1rem; left: 1rem;
+    color: white;
+    font-size: 1.25rem;
+    text-shadow: 0 0 3px $light;
+  }
+  h2 {
+    text-transform: uppercase;
+    text-align: justify;
+    text-justify: inter-word;
+    &:after { // This hack forces text justification to work
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
   }
 }
 #cta {
+  position: relative;
+  margin-bottom: 3rem;
   h3 {
+    margin-top: 0;
     text-transform: uppercase;
   }
   p {
@@ -87,7 +131,35 @@ article {
   .button {
     display: inline-block;
   }
-  margin-bottom: 3rem;
+  .overlay {
+    position: absolute;
+    top: -1rem; left: 0;
+    width: 100%;
+    min-height: 110%;
+    min-height: calc(100% + 1rem);
+    //background: rgba(255, 255, 255, .83);
+    background: white;
+    border: 1px solid $light;
+    padding: .5rem 1.5rem;
+    h2 {
+      width: 100%;
+      @include breakpoint($sm) {
+        margin-right: 3.5rem;
+      }
+    }
+    .close {
+      text-transform: none;
+      font-size: 1.5rem;
+      padding: 0 .6rem .2rem .6rem;
+      margin: 0;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      @include breakpoint($sm) {
+        padding: .15rem .8rem .4rem .8rem;
+      }
+    }
+  }
   @include breakpoint($upper) {
     .cta {
       height: 100%;

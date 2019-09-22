@@ -43,6 +43,9 @@ $flexboxgrid-max-width: 1280px - $gutter-width;
     display: none !important;
   }
 }
+.hide {
+  display: none !important;
+}
 
 // Theme
 /*
@@ -136,11 +139,6 @@ h2 {
 h3 {
   font-weight: normal;
   font-size: 1.5rem;
-}
-article {
-  @include breakpoint($upper) {
-    min-height: 30rem;
-  }
 }
 
 .fade-enter-active, .fade-leave-active {

@@ -5,8 +5,8 @@
         <header>
           <div class="row">
             <div class="col-sm-12">
-              <div class="hide-md-up" v-html="markdown(content.header_small)"></div>
-              <div class="hide-sm" v-html="markdown(content.header)"></div>
+              <router-link to="/" class="hide-md-up" v-html="markdown(content.header_small)"></router-link>
+              <router-link to="/" class="hide-sm" v-html="markdown(content.header)"></router-link>
               <climate-clock id="climate-clock"></climate-clock>
               <div class="button">{{ content.widget_button }}</div>
             </div>
@@ -20,19 +20,9 @@
             </div>
           </div>
         </section>
-        <section id="clocks">
-          <div class="row">
-            <div class="col-sm-12 col-md-4" v-for="(clock, index) in content.clocks" :key="index">
-              <figure class="clock" :style="{backgroundImage: 'url(/img/' + clock.image}">
-                <figcaption>{{ clock.title }}</figcaption>
-              </figure>
-            </div>
-            <div class="col-sm-12">
-              <h2>{{ content.cta }}</h2>
-            </div>
-          </div>
-        </section>
-        <router-view></router-view>
+        <transition name="fade">
+          <router-view></router-view>
+        </transition>
         <footer>
         </footer>
       </div>
@@ -47,12 +37,8 @@ export default {
   data: () => ({
     content: content,
   }),
-  components: {
-  },
   methods: {
   },
-  mounted() {
-  }
 }
 </script>
 
@@ -85,37 +71,6 @@ header {
     @include breakpoint($sm) {
       font-size: 1.25rem;
       margin: .5rem;
-    }
-  }
-}
-#clocks {
-  figure {
-    margin: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 72%;
-    position: relative;
-    padding-bottom: $gutter-width;
-    @include breakpoint($sm) {
-      margin-bottom: 1rem;
-    }
-  }
-  figcaption {
-    text-transform: uppercase;
-    font-weight: 800;
-    position: absolute;
-    top: 1rem; left: 1rem;
-    color: white;
-    font-size: 1.25rem;
-  }
-  h2 {
-    text-transform: uppercase;
-    text-align: justify;
-    text-justify: inter-word;
-    &:after { // This hack forces text justification to work
-      content: "";
-      display: inline-block;
-      width: 100%;
     }
   }
 }
