@@ -14,7 +14,7 @@
     </section>
     <section id="cta">
       <div class="row">
-        <div v-for="(p, i) in content.pages" :key="i" class="col-sm-12 col-md-4">
+        <div v-for="(p, i) in content.ctas" :key="i" class="col-sm-12 col-md-4">
           <div :class="['cta', 'cta-' + i]">
             <h3>{{ p.title }}</h3>
             <div v-html="markdown(p.cta)"></div>
@@ -23,7 +23,7 @@
             <a v-if="!local(p.button_link)" class="button hide-md-up" :href="p.button_link" target="_blank">{{ p.button }}</a>
           </div>
         </div>
-        <div class="col-sm-12 col-md-4" v-for="(p, i) in content.pages" :key="100 + i">
+        <div class="col-sm-12 col-md-4" v-for="(p, i) in content.ctas" :key="100 + i">
           <div :class="['cta', 'cta-' + i]">
             <!-- md lg buttons -->
             <router-link v-if="local(p.button_link)" :to="p.button_link" class="button hide-sm">{{ p.button }}</router-link> 
@@ -32,16 +32,29 @@
         </div>
       </div>
       <transition name="fade">
-        <!-- Here are the page-specific overlays -->
-        <div v-if="page != 'home'" class="overlay">
-          <router-link to="/" class="button close">x</router-link>
-          <div v-for="(p, i) in content.pages" :key="i">
-            <div v-if="page == p.button_link" class="row">
-              <h2>{{ p.button }}</h2>
-              <div v-if="p.content" v-html="markdown(p.content)" class="col-sm-12"></div>
-              <div v-if="p.content1" v-html="markdown(p.content1)" class="col-sm-12 col-md-4"></div>
-              <div v-if="p.content2" v-html="markdown(p.content2)" class="col-sm-12 col-md-4"></div>
-              <div v-if="p.content3" v-html="markdown(p.content3)" class="col-sm-12 col-md-4"></div>
+        <div v-if="page != 'home'" @click="$router.push('/')" class="overlay"></div>
+      </transition>
+      <transition name="fade-left">
+        <div v-if="page != 'home'" class="modal-background">
+          <div class="wrapper container-fluid">
+            <div class="row">
+              <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <!-- Here are the page-specific modals -->
+                <div class="modal">
+                  <router-link to="/" class="button close">x</router-link>
+                  <div v-for="(p, i) in content.ctas" :key="i">
+                    <div v-if="page == p.button_link" class="row">
+                      <div class="col-sm-12">
+                        <h2>{{ p.button }}</h2>
+                      </div>
+                      <div v-if="p.content" v-html="markdown(p.content)" class="col-sm-12"></div>
+                      <div v-if="p.content1" v-html="markdown(p.content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
+                      <div v-if="p.content2" v-html="markdown(p.content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
+                      <div v-if="p.content3" v-html="markdown(p.content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -60,6 +73,7 @@ export default {
   computed: {
     page() { return this.$route.params.page || 'home' },
   },
+  /*
   watch: {
     '$route.params.page' (newPage, oldPage) {
       this.page = newPage ? newPage : 'home'
@@ -68,6 +82,7 @@ export default {
       }
     },
   },
+  */
   methods: {
   },
   mounted() {
@@ -131,35 +146,6 @@ article {
   .button {
     display: inline-block;
   }
-  .overlay {
-    position: absolute;
-    top: -1rem; left: 0;
-    width: 100%;
-    min-height: 110%;
-    min-height: calc(100% + 1rem);
-    //background: rgba(255, 255, 255, .83);
-    background: white;
-    border: 1px solid $light;
-    padding: .5rem 1.5rem;
-    h2 {
-      width: 100%;
-      @include breakpoint($sm) {
-        margin-right: 3.5rem;
-      }
-    }
-    .close {
-      text-transform: none;
-      font-size: 1.5rem;
-      padding: 0 .6rem .2rem .6rem;
-      margin: 0;
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      @include breakpoint($sm) {
-        padding: .15rem .8rem .4rem .8rem;
-      }
-    }
-  }
   @include breakpoint($upper) {
     .cta {
       height: 100%;
@@ -170,6 +156,51 @@ article {
     }
     .cta-1, .cta-2 {
       padding-left: 1rem;
+    }
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  bottom: 0; right: 0;
+  background-color: rgba(255, 255, 255, .8);
+}
+.modal-background {
+  position: fixed;
+  top: 0; left: 0;
+  bottom: 0; right: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal {
+  pointer-events: auto;
+  position: relative;
+  bottom: 2rem;
+  background-color: white;
+  border: 1px solid $light;
+  padding: .5rem 1.5rem 1.5rem 1.5rem;
+  h2 {
+    width: 100%;
+    @include breakpoint($sm) {
+      margin-right: 3.5rem;
+    }
+  }
+  img {
+    width: 100%;
+    padding-right: 1rem;
+  }
+  .close {
+    text-transform: none;
+    font-size: 1.5rem;
+    padding: 0 .6rem .2rem .6rem;
+    margin: 0;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    @include breakpoint($sm) {
+      padding: .15rem .8rem .4rem .8rem;
     }
   }
 }

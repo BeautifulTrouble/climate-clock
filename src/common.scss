@@ -105,7 +105,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: $text;
+  color: $accent;
 }
 h1, h2, h3, h4, h5, h6, .button {
   font-family: Raleway, Helvetica, Arial, sans-serif;
@@ -115,10 +115,11 @@ h1, h2, h3, h4, h5, h6, .button {
 h1 {
   font-size: 4.8rem;
   font-weight: 800;
+  color: $text;
   margin: 0;
   padding: 4rem 0 1.5rem 0;
   line-height: 1;
-  text-shadow: .5px 0 1px $light;
+  text-shadow: 0 0 2px $light;
   @include breakpoint($sm) {
     font-size: 3.5rem;
     line-height: .85;
@@ -141,12 +142,31 @@ h3 {
   font-weight: normal;
   font-size: 1.5rem;
 }
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .2s;
+h4 {
+  margin: .75rem 0;
 }
-.fade-enter-to, .fade-leave {
-  opacity: 1;
+ol {
+  padding-left: 1rem;
+}
+li {
+  font-size: .75rem;
+  p {
+    font-size: .6rem !important;
+  }
+}
+
+.fade-left-enter-active, .fade-left-leave-active,
+.fade-right-enter-active, .fade-right-leave-active,
+.fade-enter-active, .fade-leave-active {
+  transition: all .2s;
+}
+.fade-left-enter, .fade-left-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade-right-enter, .fade-right-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;

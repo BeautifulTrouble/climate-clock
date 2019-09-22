@@ -16,7 +16,7 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {path: '/', component: Page},
-    {path: '/:page(about|make|science)', component: Page},
+    {path: '/:page(about|donate|make|science|widget)', component: Page},
   ]
 })
 
