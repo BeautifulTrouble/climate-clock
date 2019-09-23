@@ -19,20 +19,20 @@
             <h3>{{ p.title }}</h3>
             <div v-html="markdown(p.cta)"></div>
             <!-- sm buttons -->
-            <router-link v-if="local(p.button_link)" :to="p.button_link" class="button hide-md-up">{{ p.button }}</router-link> 
-            <a v-if="!local(p.button_link)" class="button hide-md-up" :href="p.button_link" target="_blank">{{ p.button }}</a>
+            <router-link v-if="local(p.link)" :to="p.link" class="button hide-md-up">{{ p.button }}</router-link> 
+            <a v-if="!local(p.link)" class="button hide-md-up" :href="p.link" target="_blank">{{ p.button }}</a>
           </div>
         </div>
         <div class="col-sm-12 col-md-4" v-for="(p, i) in content.ctas" :key="100 + i">
           <div :class="['cta', 'cta-' + i]">
             <!-- md lg buttons -->
-            <router-link v-if="local(p.button_link)" :to="p.button_link" class="button hide-sm">{{ p.button }}</router-link> 
-            <a v-if="!local(p.button_link)" class="button hide-sm" :href="p.button_link" target="_blank">{{ p.button }}</a>
+            <router-link v-if="local(p.link)" :to="p.link" class="button hide-sm">{{ p.button }}</router-link> 
+            <a v-if="!local(p.link)" class="button hide-sm" :href="p.link" target="_blank">{{ p.button }}</a>
           </div>
         </div>
       </div>
       <transition name="fade">
-        <div v-if="page != 'home'" @click="$router.push('/')" class="overlay"></div>
+        <div v-if="page != 'home'" @click="$router.push('/')" class="overlay hide-sm"></div>
       </transition>
       <transition name="fade-left">
         <div v-if="page != 'home'" class="modal-background">
@@ -43,10 +43,11 @@
                 <div class="modal">
                   <router-link to="/" class="button close">x</router-link>
                   <div v-for="(p, i) in content.ctas" :key="i">
-                    <div v-if="page == p.button_link" class="row">
+                    <div v-if="page == p.link" class="row">
                       <div class="col-sm-12">
                         <h2>{{ p.button }}</h2>
                       </div>
+                      <!-- Special case all the special features on specific pages -->
                       <div v-if="p.content" v-html="markdown(p.content)" class="col-sm-12"></div>
                       <div v-if="p.content1" v-html="markdown(p.content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
                       <div v-if="p.content2" v-html="markdown(p.content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
@@ -72,23 +73,6 @@ export default {
   }),
   computed: {
     page() { return this.$route.params.page || 'home' },
-  },
-  /*
-  watch: {
-    '$route.params.page' (newPage, oldPage) {
-      this.page = newPage ? newPage : 'home'
-      if (this.page != 'home') {
-        console.log('gottascroll')
-      }
-    },
-  },
-  */
-  methods: {
-  },
-  mounted() {
-    if (this.$route.params.page) {
-
-    }
   },
 }
 </script>
@@ -181,6 +165,9 @@ article {
   background-color: white;
   border: 1px solid $light;
   padding: .5rem 1.5rem 1.5rem 1.5rem;
+  h1 {
+    padding: 0;
+  }
   h2 {
     width: 100%;
     @include breakpoint($sm) {
@@ -202,6 +189,12 @@ article {
     @include breakpoint($sm) {
       padding: .15rem .8rem .4rem .8rem;
     }
+  }
+  @include breakpoint($sm) {
+    position: fixed;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+    overflow-y: scroll;
   }
 }
 </style>

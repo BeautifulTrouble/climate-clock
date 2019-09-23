@@ -119,7 +119,6 @@ h1 {
   margin: 0;
   padding: 4rem 0 1.5rem 0;
   line-height: 1;
-  text-shadow: 0 0 2px $light;
   @include breakpoint($sm) {
     font-size: 3.5rem;
     line-height: .85;
@@ -153,6 +152,13 @@ li {
   p {
     font-size: .6rem !important;
   }
+}
+input[type=submit] {
+  border: none;
+  margin: .5rem 0;
+}
+input:focus {
+  outline: none;
 }
 
 .fade-left-enter-active, .fade-left-leave-active,

@@ -20,10 +20,12 @@
             </div>
           </div>
         </section>
-        <transition name="fade">
-          <router-view></router-view>
-        </transition>
+        <router-view></router-view>
         <footer>
+          <div v-for="(item, i) in content.menu" :key="i">
+            <a v-if="item.link == '#top'" v-smooth-scroll="{duration: 250}" href="#app"><h3>HOME</h3></a>
+            <router-link v-else :to="item.link"><h3>{{ item.title }}</h3></router-link>
+          </div>
         </footer>
       </div>
     </div>
@@ -71,6 +73,23 @@ header {
     @include breakpoint($sm) {
       font-size: 1.25rem;
       margin: .5rem;
+    }
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0 10rem 0;
+  @include breakpoint($sm) {
+    flex-direction: column;
+  }
+  h3 {
+    text-transform: uppercase;
+    color: $dark;
+    margin: 0 3rem;
+    @include breakpoint($sm) {
+      margin: 0;
+      font-size: 3rem;
     }
   }
 }
