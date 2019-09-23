@@ -20,7 +20,7 @@
               <h2>{{ content.video_caption }}</h2>
               -->
               <h2><a href="http://webtv.un.org" target="_blank">Watch Greta Thunberg address the UN General Assembly</a></h2>
-              <h4 style="text-align:center">September 22 at 10am ET</h4>
+              <h4 style="text-align:center">September 23 at 10am ET</h4>
             </div>
           </div>
         </section>
