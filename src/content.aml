@@ -23,8 +23,9 @@ link: donate
 widget_button: Download Widget
 
 - Currently we can only use youtube videos
-video: https://www.youtube.com/watch?v=ScMzIvxBSi4
+video: https://www.youtube.com/watch?v=Wimkqo8gDZ0
 video_caption: Watch Greta Thunberg address the UN General Assembly
+video_caption: Watch Greta Thunberg address the UN General Assembly September 22 at 10am ET
 
 
 [clocks]
@@ -146,6 +147,7 @@ link: donate
 
 [pages]
 title: About
+link: about
 
 content1: ###The climate clock Greta used in her UN speech on Monday Sept 23 (as well as the larger CLIMATECLOCK project) was assembled by a team of artists, makers, scientists and activists based in New York.
 
@@ -177,10 +179,20 @@ Here we are.
 
 ---
 
-title: Download the Widget
-content: ``` 
+title: Got a website?
+link: widget
+content: 
+## We'd love for you to spread our CLIMATECLOCK widget across the web. 
+
+It's still in its infancy, but you can contribute to the code [on github](https://github.com/BeautifulTrouble/climate-clock-widget).
+
+[Download the script](https://climateclock.world/widget-v1.js) and install it to your server, or add the following HTML to your site.
+
+``` 
 <script src="https://climateclock.world/widget-v1.js" async></script>
 <climate-clock></climate-clock>
 ``` 
+
+We're working on a design you can customize, so stay tuned or contribute a pull request.
 :end
 []

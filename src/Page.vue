@@ -66,7 +66,7 @@
                     <div class="col-sm-12">
                       <h2>{{ content.pages[1].title }}</h2>
                     </div>
-                    <h1 v-html="markdown(content.pages[1].content)"></h1>
+                    <div v-html="markdown(content.pages[1].content)" class="col-sm-12"></div>
                   </div>
                 </div>
               </div>

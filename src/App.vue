@@ -15,8 +15,12 @@
         <section id="video">
           <div class="row">
             <div class="col-sm-12">
+              <!--
               <youtube-player :video-id="content.video"></youtube-player>
               <h2>{{ content.video_caption }}</h2>
+              -->
+              <h2><a href="http://webtv.un.org">Watch Greta Thunberg address the UN General Assembly</a></h2>
+              <h4 style="text-align:center">September 22 at 10am ET</h4>
             </div>
           </div>
         </section>
