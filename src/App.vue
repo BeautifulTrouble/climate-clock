@@ -20,8 +20,7 @@
               <youtube-player :video-id="content.video"></youtube-player>
               <h2>{{ content.video_caption }}</h2>
               -->
-              <h3 style="text-align:center"><a href="http://webtv.un.org/live-now/watch/part-1-climate-action-summit-2019/5970440811001" target="_blank">Click here to watch Greta Thunberg address the UN General Assembly</a></h3>
-              <h4 style="text-align:center">September 23 at 10am ET</h4>
+              <img src="/img/greta_un.jpg" style="max-width:100%;">
             </div>
           </div>
         </section>
@@ -79,6 +78,8 @@ header {
       font-size: 1.25rem;
       margin: .5rem;
     }
+  }
+  .image {
   }
 }
 footer {
