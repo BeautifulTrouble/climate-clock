@@ -175,10 +175,10 @@ export default {
   border: 1px solid $light;
   padding: .5rem 1.5rem 1.5rem 1.5rem;
   h1 {
+    margin-top: 1rem;
     padding: 0;
   }
   h2 {
-    width: 100%;
     @include breakpoint($sm) {
       margin-right: 3.5rem;
     }
