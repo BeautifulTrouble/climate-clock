@@ -13,7 +13,7 @@
             </div>
           </div>
         </header>
-        <section v-scroll-reveal.reset="reveal" id="video">
+        <section id="video">
           <div class="row">
             <div class="col-sm-12">
               <!--
