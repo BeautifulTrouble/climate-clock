@@ -23,6 +23,7 @@ const router = new Router({
 })
 
 Vue.config.productionTip = false
+Vue.config.ignoredElements = ['climate-clock']
 
 Vue.use(VueSmoothScroll)
 Vue.use(VueScrollReveal)
