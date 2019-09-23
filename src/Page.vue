@@ -2,7 +2,7 @@
   <article>
     <section id="clocks">
       <div class="row">
-        <div class="col-sm-12 col-md-4" v-for="(clock, index) in content.clocks" :key="index">
+        <div v-scroll-reveal.reset="reveal" class="col-sm-12 col-md-4" v-for="(clock, index) in content.clocks" :key="index">
           <figure @click="clockOn(index)" :style="{backgroundImage: 'url(/img/' + clock.image}">
             <figcaption>{{ clock.title }}</figcaption>
             <transition name="fade">
@@ -10,7 +10,7 @@
             </transition>
           </figure>
         </div>
-        <div class="col-sm-12">
+        <div v-scroll-reveal.reset="reveal" class="col-sm-12">
           <h2>{{ content.cta }}</h2>
         </div>
       </div>
@@ -19,11 +19,11 @@
       <div class="row">
         <div v-for="(p, i) in content.ctas" :key="i" class="col-sm-12 col-md-4">
           <div :class="['cta', 'cta-' + i]">
-            <h3 class="title">{{ p.title }}</h3>
-            <div v-html="markdown(p.cta)"></div>
+            <h3 v-scroll-reveal.reset="reveal" class="title">{{ p.title }}</h3>
+            <div v-scroll-reveal.reset="reveal" v-html="markdown(p.cta)"></div>
             <!-- sm buttons -->
-            <router-link v-if="local(p.link)" :to="p.link" class="button hide-md-up">{{ p.button }}</router-link> 
-            <a v-if="!local(p.link)" class="button hide-md-up" :href="p.link" target="_blank">{{ p.button }}</a>
+            <router-link v-scroll-reveal.reset="reveal" v-if="local(p.link)" :to="p.link" class="button hide-md-up">{{ p.button }}</router-link> 
+            <a v-scroll-reveal.reset="reveal" v-if="!local(p.link)" class="button hide-md-up" :href="p.link" target="_blank">{{ p.button }}</a>
           </div>
         </div>
         <div class="col-sm-12 col-md-4" v-for="(p, i) in content.ctas" :key="100 + i">
@@ -198,6 +198,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 1; // Without which, scroll-reveal will place footer above
 }
 .modal {
   pointer-events: auto;
