@@ -8,7 +8,7 @@
               <router-link to="/" class="hide-md-up" v-html="markdown(content.header_small)"></router-link>
               <router-link to="/" class="hide-sm" v-html="markdown(content.header)"></router-link>
               <climate-clock id="climate-clock"></climate-clock>
-              <div class="button">{{ content.widget_button }}</div>
+              <router-link class="button" to="widget">{{ content.widget_button }}</router-link>
             </div>
           </div>
         </header>

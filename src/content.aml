@@ -1,25 +1,49 @@
 header: #CLIMATECLOCK
 header_small: #CLIMATE<br>CLOCK
 
+
+[menu]
+title: Home
+link: #top
+
+title: About
+link: about
+
+title: Science
+link: science
+
+title: Make
+link: make
+
+title: Donate
+link: donate
+[]
+
+
 widget_button: Download Widget
 
 - Currently we can only use youtube videos
 video: https://www.youtube.com/watch?v=ScMzIvxBSi4
 video_caption: Watch Greta Thunberg address the UN General Assembly
 
+
 [clocks]
 title: Berlin 2019
 image: berlin.jpg
-link:
+description: 
 
 title: Paris 2020
 image: paris.jpg
+description: 
 
 title: New York 2020
 image: newyork.jpg
+description: 
 []
 
+
 cta: Put the most important number in the world everywhere
+
 [ctas]
 title: Know the numbers
 cta: The climate clock shows two numbers. It shows how much CO2 in tons can still be released into the atmosphere while limiting global warming to 1.5°C above pre-industrial levels, and it shows how long it will take to emit that amount of carbon dioxide at current rates. This is the time period we have left to take decisive action to keep warming under the 1.5°C threshold. 
@@ -119,35 +143,44 @@ link: donate
 
 <iframe class='gfm-media-widget' image='1' coinfo='1' width='100%' height='100%' frameborder='0' id='fd997b-help-us'></iframe><script src='//funds.gofundme.com/js/5.0/media-widget.js'></script>
 
-[menu]
-title: Home
-link: #top
-
-title: About
-link: about
-
-title: Science
-link: science
-
-title: Make
-link: make
-
-title: Donate
-link: donate
-[]
 
 [pages]
 title: About
-content: The climate clock Greta used in her UN speech on Monday Sept 23 (as well as the larger CLIMATECLOCK project) was assembled by a team of artists, makers, scientists and activists based in New York.
 
-Here we are:
+content1: ###The climate clock Greta used in her UN speech on Monday Sept 23 (as well as the larger CLIMATECLOCK project) was assembled by a team of artists, makers, scientists and activists based in New York.
 
-![Team photo](/img/about.jpg)
+content2:
+Please consider **[Donating to our gofundme](https://www.gofundme.com/f/fd997b-help-us)** and spreading the word via the [#ClimateClock](https://twitter.com/hashtag/climateclock?f=tweets) hashtag.
 
+Contact us at info (at) climateclock (dot) world, or leave us your email and we'll keep in touch.
 
-Contact us at info (at) climateclock (dot) world
+<!-- TODO: clean this up -->
+<form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2aa3b5c34f535e74090f9098d_e450999d72" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
 :end
 
+content3:
+![Team photo](/img/about.jpg)
+Here we are.
+:end
+
+---
+
 title: Download the Widget
-content: 
+content: ``` 
+<script src="https://climateclock.world/widget-v1.js" async></script>
+<climate-clock></climate-clock>
+``` 
+:end
 []

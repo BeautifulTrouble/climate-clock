@@ -16,7 +16,7 @@
       <div class="row">
         <div v-for="(p, i) in content.ctas" :key="i" class="col-sm-12 col-md-4">
           <div :class="['cta', 'cta-' + i]">
-            <h3>{{ p.title }}</h3>
+            <h3 class="title">{{ p.title }}</h3>
             <div v-html="markdown(p.cta)"></div>
             <!-- sm buttons -->
             <router-link v-if="local(p.link)" :to="p.link" class="button hide-md-up">{{ p.button }}</router-link> 
@@ -54,6 +54,20 @@
                       <div v-if="p.content3" v-html="markdown(p.content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
                     </div>
                   </div>
+                  <div v-if="page == 'about'" class="row">
+                    <div class="col-sm-12">
+                      <h2>{{ content.pages[0].title }}</h2>
+                    </div>
+                    <div v-html="markdown(content.pages[0].content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
+                    <div v-html="markdown(content.pages[0].content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
+                    <div v-html="markdown(content.pages[0].content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
+                  </div>
+                  <div v-if="page == 'widget'" class="row">
+                    <div class="col-sm-12">
+                      <h2>{{ content.pages[1].title }}</h2>
+                    </div>
+                    <h1 v-html="markdown(content.pages[1].content)"></h1>
+                  </div>
                 </div>
               </div>
             </div>
@@ -80,11 +94,6 @@ export default {
 <style lang="scss">
 @import './common';
 
-article {
-  @include breakpoint($upper) {
-    //min-height: 30rem;
-  }
-}
 #clocks {
   figure {
     margin: 0;
@@ -120,7 +129,7 @@ article {
 #cta {
   position: relative;
   margin-bottom: 3rem;
-  h3 {
+  h3.title {
     margin-top: 0;
     text-transform: uppercase;
   }
@@ -173,6 +182,10 @@ article {
     @include breakpoint($sm) {
       margin-right: 3.5rem;
     }
+  }
+  h3 {
+    text-transform: none !important;
+    line-height: 1.2;
   }
   img {
     width: 100%;

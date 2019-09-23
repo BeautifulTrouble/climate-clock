@@ -51,7 +51,7 @@ export default {
             modestbranding: 1
           }
         });
-      },
+      }, // eslint-disable-next-line
       error => console.error(error)
     );
   },
