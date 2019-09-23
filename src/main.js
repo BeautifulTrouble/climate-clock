@@ -34,9 +34,8 @@ Vue.component('youtube-player', Youtube)
 // Is this against the law?
 Vue.prototype.reveal = {
   origin: 'left', 
-  distance: '40px', 
+  distance: '50px', 
   opacity: .2,
-  duration: 300,
 }
 
 Vue.mixin({
