@@ -5,6 +5,7 @@ import App from './App.vue'
 import Page from './Page.vue'
 import Youtube from './Youtube.vue'
 
+import VueSmoothScroll from 'vue2-smooth-scroll'
 import showdown from 'showdown'
 import showdownTargetBlank from 'showdown-target-blank'
 
@@ -21,6 +22,7 @@ const router = new Router({
 })
 
 Vue.config.productionTip = false
+Vue.use(VueSmoothScroll)
 Vue.use(Router)
 Vue.component('youtube-player', Youtube)
 Vue.mixin({
