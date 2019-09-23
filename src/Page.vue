@@ -3,7 +3,7 @@
     <section id="clocks">
       <div class="row">
         <div v-scroll-reveal.reset="reveal" class="col-sm-12 col-md-4" v-for="(clock, index) in content.clocks" :key="index">
-          <figure @click="clockOn(index)" :style="{backgroundImage: 'url(/img/' + clock.image}">
+          <figure @click="clockOn(index)" :class="'clock-' + index" :style="{backgroundImage: 'url(/img/' + clock.image}">
             <figcaption>{{ clock.title }}</figcaption>
             <transition name="fade">
               <div v-if="clockIsOn(index)" v-html="markdown(clock.description)"></div>
@@ -112,6 +112,10 @@ export default {
 
 #clocks {
   figure {
+    // WTF IE
+    &.clock-0 { background-image: url(/img/berlin.jpg); }
+    &.clock-1 { background-image: url(/img/paris.jpg); }
+    &.clock-2 { background-image: url(/img/newyork.jpg); }
     margin: 0;
     cursor: pointer;
     background-size: cover;
