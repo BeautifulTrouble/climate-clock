@@ -1,3 +1,5 @@
 [submodule "climate-clock-widget"]
 	path = climate-clock-widget
 	url = https://github.com/beautifultrouble/climate-clock-widget.git
+	branch = master
+	update = merge
