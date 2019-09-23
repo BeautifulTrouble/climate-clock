@@ -3,8 +3,11 @@
     <section id="clocks">
       <div class="row">
         <div class="col-sm-12 col-md-4" v-for="(clock, index) in content.clocks" :key="index">
-          <figure class="clock" :style="{backgroundImage: 'url(/img/' + clock.image}">
+          <figure @click="clockOn(index)" :style="{backgroundImage: 'url(/img/' + clock.image}">
             <figcaption>{{ clock.title }}</figcaption>
+            <transition name="fade">
+              <div v-if="clockIsOn(index)" v-html="markdown(clock.description)"></div>
+            </transition>
           </figure>
         </div>
         <div class="col-sm-12">
@@ -84,7 +87,20 @@ import content from './content.aml'
 export default {
   data: () => ({
     content: content,
+    // TODO: sheesh I'm tired
+    clock0: false,
+    clock1: false,
+    clock2: false,
   }),
+  methods: {
+    clockOn(n) {
+      this['clock' + n] = true
+      setTimeout(() => { this['clock' + n] = false }, 10000)
+    },
+    clockIsOn(n) {
+      return this['clock' + n]
+    },
+  },
   computed: {
     page() { return this.$route.params.page || 'home' },
   },
@@ -97,6 +113,7 @@ export default {
 #clocks {
   figure {
     margin: 0;
+    cursor: pointer;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 72%;
@@ -104,6 +121,21 @@ export default {
     padding-bottom: $gutter-width;
     @include breakpoint($sm) {
       margin-bottom: 1rem;
+    }
+    div {
+      position: absolute;
+      top: 0; left: 0;
+      bottom: 0; right: 0;
+      background-color: rgba($dark, .6);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 2rem;
+      h3 {
+        color: white;
+        text-shadow: 0 0 100px 20px $dark;
+        text-align: center;
+      }
     }
   }
   figcaption {

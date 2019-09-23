@@ -70,6 +70,12 @@ $light: #8d8c91;
 $text: #080808;
 
 // Utilities
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
 .button {
   cursor: pointer;
   padding: .4rem 1rem .3rem 1rem;
