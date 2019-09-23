@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <a id="top"></a>
     <div class="wrapper container-fluid">
       <div class="col-sm-12 col-md-10 col-md-offset-1">
         <header>
@@ -27,7 +28,7 @@
         <router-view></router-view>
         <footer>
           <div v-for="(item, i) in content.menu" :key="i">
-            <a v-if="item.link == '#top'" v-smooth-scroll="{duration: 250}" href="#app"><h3>HOME</h3></a>
+            <a v-if="item.link == '#top'" v-smooth-scroll="{duration: 250}" href="#top"><h3>HOME</h3></a>
             <router-link v-else :to="item.link"><h3>{{ item.title }}</h3></router-link>
           </div>
         </footer>
