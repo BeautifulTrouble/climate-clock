@@ -3,7 +3,7 @@
     <a id="top"></a>
     <div class="wrapper container-fluid">
       <div class="col-sm-12 col-md-10 col-md-offset-1">
-        <header v-scroll-reveal.reset="reveal">
+        <header>
           <div class="row">
             <div class="col-sm-12">
               <router-link to="/" class="hide-md-up" v-html="markdown(content.header_small)"></router-link>
@@ -25,7 +25,7 @@
           </div>
         </section>
         <router-view></router-view>
-        <footer v-scroll-reveal.reset="reveal">
+        <footer>
           <div v-for="(item, i) in content.menu" :key="i">
             <a v-if="item.link == '#top'" v-smooth-scroll="{duration: 250}" href="#top"><h3>HOME</h3></a>
             <router-link v-else :to="item.link"><h3>{{ item.title }}</h3></router-link>
