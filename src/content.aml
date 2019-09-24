@@ -56,11 +56,12 @@ This clock follows the methodology of the carbon clock made by the Mercator [Res
 “The concept of the carbon budget is based on a nearly linear relationship between the cumulative emissions and the temperature rise. Nevertheless, this does not mean that the earth would necessarily be 1.5⁰C warmer at the very point in time when the remaining carbon budget for staying below the 1.5⁰C threshold was used up. This is due to, among others, the fact that there is a time lag between the concentration of emissions in the atmosphere and the impact thereof on the temperature”.¹
 :end
 
-content2:
-MCC also notes that their calculations assume “that the annual emissions of years to come will be close to those of the year 2017, while latest numbers show that emissions are still on the rise.” If this trend continues, the time we have to act will be reduced. Furthermore, it is unlikely that earth’s climate warms at a linear rate. For example, potential climatic tipping points have been identified in Earth’s physical climate system that would cause large and possibly irreversible transitions in the state of the climate.² These uncertainties are why the IPCC report states there is a 67% chance that the carbon budget will limit warming to 1.5°C.
+
+content2: MCC also notes that their calculations assume “that the annual emissions of years to come will be close to those of the year 2017, while latest numbers show that emissions are still on the rise.” If this trend continues, the time we have to act will be reduced. Furthermore, it is unlikely that earth’s climate warms at a linear rate. For example, potential climatic tipping points have been identified in Earth’s physical climate system that would cause large and possibly irreversible transitions in the state of the climate.² These uncertainties are why the IPCC report states there is a 67% chance that the carbon budget will limit warming to 1.5°C.
 
 The IPCC Special Report on Global Warming is largely based on a research paper called “Global Carbon Budget 2018” published in 2018 by Corinne Le Quéré et al.³ This paper estimates the carbon budget in the units of GtC.⁴
 :end
+
 
 content3: 1. Mercator Research Institute on Global Commons and Climate Change. “That’s How Fast the Carbon Clock Is Ticking.” MCC Carbon Clock. https://www.mcc-berlin.net/en/research/co2-budget.html (accessed September 22, 2019).
 
@@ -70,6 +71,7 @@ content3: 1. Mercator Research Institute on Global Commons and Climate Change. �
 
 4. IPCC, 2018: Global warming of 1.5°C. An IPCC Special Report on the impacts of global warming of 1.5°C above pre-industrial levels and related global greenhouse gas emission pathways, in the context of strengthening the global response to the threat of climate change, sustainable development, and efforts to eradicate poverty [V. Masson-Delmotte, P. Zhai, H. O. Pörtner, D. Roberts, J. Skea, P.R. Shukla, A. Pirani, W. Moufouma-Okia, C. Péan, R. Pidcock, S. Connors, J. B. R. Matthews, Y. Chen, X. Zhou, M. I. Gomis, E. Lonnoy, T. Maycock, M. Tignor, T. Waterfield (eds.)]. In Press.
 :end
+
 button: See the science
 link: science
 
@@ -80,6 +82,7 @@ cta: The #ClimateClock is an open-source project. Our team in New York that put 
 :end
 
 content1: ![Workshop photo](/img/clock.jpg)
+
 
 content2:
 The #ClimateClock is an open-source project. Our team in New York that put together the clock for Greta’s speech at the UN used inexpensive electronics (programmable Raspberry Pi circuit board, RGB LED matrix panels, etc.), a wooden casing, and the scientific methodology outlined [here](https://www.mcc-berlin.net/en/research/co2-budget.html) by Berlin’s MCC climate research institute — and so can you! 
@@ -102,11 +105,13 @@ We will soon publish a step-by-step maker-kit to help you make your own. If you 
 </form>
 :end
 
+
 content3:
 ####In the meantime, share your efforts and results via the [#ClimateClock](https://twitter.com/hashtag/climateclock?f=tweets) hashtag.
 
 ####And download the #ClimateClock Widget.
 :end
+
 button: Download maker kit
 link: make
 
@@ -123,6 +128,7 @@ Greta brought her climate clock to the UN this Monday. A few days earlier, the F
  Both of these clocks drew the world’s attention to the urgency for action. And it’s an incredible start. But if we are to survive, we need a constant, public reminder of our deadline — everywhere!
 :end
 
+
 content2: Help us put a [#ClimateClock](https://twitter.com/hashtag/climateclock?f=tweets) up in every major city in the world by:
 
 ####· **[Donating to our gofundme](https://www.gofundme.com/f/fd997b-help-us)**
@@ -133,6 +139,7 @@ content2: Help us put a [#ClimateClock](https://twitter.com/hashtag/climateclock
 
 With our eye on what is arguably “the most important number in the world,” let’s synchronize our watches, and get busy. 
 :end
+
 
 content3:
 #It’s. Time. To. Act.
@@ -149,6 +156,7 @@ title: About
 link: about
 
 content1: ###The climate clock Greta used in her UN speech on Monday Sept 23 (as well as the larger CLIMATECLOCK project) was assembled by a team of artists, makers, scientists and activists based in New York.
+
 
 content2:
 Please consider **[donating to our gofundme](https://www.gofundme.com/f/fd997b-help-us)** and spreading the word via the [#ClimateClock](https://twitter.com/hashtag/climateclock?f=tweets) hashtag.
@@ -170,6 +178,7 @@ Contact us at info (at) climateclock (dot) world, or leave us your email and we'
     </div>
 </form>
 :end
+
 
 content3:
 ![Team photo](/img/about.jpg)
