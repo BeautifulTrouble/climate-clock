@@ -201,7 +201,7 @@ Add the following HTML to your site:
 <climate-clock></climate-clock>
 ``` 
 
-The script will also work if hosted on your own server, and can be [built from source if you prefer](https://github.com/BeautifulTrouble/climate-clock-widget).
+Some blogging systems will only accept tags they recognize, so the `<climate-clock>` tag may be filtered. If you come across this problem, ask a website tech how to add html directly to your page. The script will also work if hosted on your own server, and can be [built from source if you prefer](https://github.com/BeautifulTrouble/climate-clock-widget).
 
 We're working on a design you can customize, so stay tuned or contribute a pull request.
 :end
