@@ -194,7 +194,7 @@ content:
 
 It's still in its infancy, but you can contribute to the code [on github](https://github.com/BeautifulTrouble/climate-clock-widget).
 
-Add the following HTML to your site:
+To add the CLIMATECLOCK widget to your site, add the following HTML:
 
 ``` 
 <script src="https://climateclock.world/widget-v1.js" async></script>
