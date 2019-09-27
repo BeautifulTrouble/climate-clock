@@ -194,12 +194,14 @@ content:
 
 It's still in its infancy, but you can contribute to the code [on github](https://github.com/BeautifulTrouble/climate-clock-widget).
 
-[Download the script](https://climateclock.world/widget-v1.js) and install it to your server, or add the following HTML to your site.
+Add the following HTML to your site:
 
 ``` 
 <script src="https://climateclock.world/widget-v1.js" async></script>
 <climate-clock></climate-clock>
 ``` 
+
+The script will also work if hosted on your own server, and can be [built from source if you prefer](https://github.com/BeautifulTrouble/climate-clock-widget).
 
 We're working on a design you can customize, so stay tuned or contribute a pull request.
 :end
