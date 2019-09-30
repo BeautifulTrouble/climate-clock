@@ -149,7 +149,7 @@ export default {
     top: 1rem; left: 1rem;
     color: white;
     font-size: 1.25rem;
-    text-shadow: 0 0 3px $light;
+    text-shadow: 0 0 2px $light;
   }
   h2 {
     text-transform: uppercase;
