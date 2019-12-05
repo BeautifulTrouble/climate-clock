@@ -87,7 +87,7 @@ content1: ![Workshop photo](/img/clock.jpg)
 content2:
 The #ClimateClock is an open-source project. Our team in New York that put together Greta’s mobile climate clock used inexpensive electronics (programmable Raspberry Pi circuit board, RGB LED matrix panels, etc.), a wooden casing, and the scientific methodology outlined [here](https://www.mcc-berlin.net/en/research/co2-budget.html) by Berlin’s MCC climate research institute — and so can you! 
 
-We're developing a step-by-step maker-kit so you can...
+We've developed a step-by-step maker-kit so you can...
 ##[Make your own!](https://github.com/BeautifulTrouble/climate-clock-kit/blob/master/instructions/instructions.md)
 :end
 
