@@ -33,3 +33,6 @@ cd ../site
 ln -s ../climate-clock-widget/dist/widget-v1.js
 ln -s ../climate-clock-widget/dist/iframe.html
 
+# TEMPORARY maker kit image hosting
+for i in ~/climate-clock-images/*.img; do ln -s $i; done
+
