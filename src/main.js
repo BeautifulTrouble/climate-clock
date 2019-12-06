@@ -5,6 +5,7 @@ import App from './App.vue'
 import Page from './Page.vue'
 import Youtube from './Youtube.vue'
 
+import VueCarousel from 'vue-carousel'
 import VueSmoothScroll from 'vue2-smooth-scroll'
 import VueScrollReveal from 'vue-scroll-reveal'
 import showdown from 'showdown'
@@ -25,6 +26,7 @@ const router = new Router({
 Vue.config.productionTip = false
 Vue.config.ignoredElements = ['climate-clock']
 
+Vue.use(VueCarousel)
 Vue.use(VueSmoothScroll)
 Vue.use(VueScrollReveal)
 Vue.use(Router)

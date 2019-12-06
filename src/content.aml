@@ -15,6 +15,9 @@ link: science
 title: Make
 link: make
 
+title: Join
+link: https://forms.gle/AvAdquospNWgTABT6
+
 title: Donate
 link: donate
 []
@@ -23,8 +26,11 @@ link: donate
 widget_button: Download Widget
 
 - Currently we can only use youtube videos
-video: https://www.youtube.com/watch?v=Wimkqo8gDZ0
-video_caption: Watch Greta Thunberg address the UN General Assembly
+  TODO make this an array of slides
+video: https://www.youtube.com/watch?v=ZWjvR055OlE
+video_caption: UN Climate Action Summit
+video_projection: https://youtube.com/watch?v=SzsdC0_9E-I
+video_projection_caption: You may have seen our clocks
 
 
 [clocks]
@@ -34,7 +40,7 @@ description: ###\#ClimateClock [erected](https://www.mcc-berlin.net/en/news/info
 
 title: Paris 2020
 image: paris.jpg
-description: ###Put a #ClimateClock up in your city.
+description: ###We have to #ActInTime.
 
 title: New York 2020
 image: newyork.jpg
@@ -87,18 +93,18 @@ content1: ![Workshop photo](/img/clock.jpg)
 content2:
 The #ClimateClock is an open-source project. Our team in New York that put together Greta’s mobile climate clock used inexpensive electronics (programmable Raspberry Pi circuit board, RGB LED matrix panels, etc.), a wooden casing, and the scientific methodology outlined [here](https://www.mcc-berlin.net/en/research/co2-budget.html) by Berlin’s MCC climate research institute — and so can you! 
 
-We've developed a step-by-step maker-kit so you can...
-##[Make your own!](https://github.com/BeautifulTrouble/climate-clock-kit/blob/master/instructions/instructions.md)
+####We've developed a step-by-step CLIMATECLOCK
+##[Maker Kit](https://github.com/BeautifulTrouble/climate-clock-kit/blob/master/instructions/instructions.md)
 :end
 
 
 content3:
-####In the meantime, share your efforts and results via the [#ClimateClock](https://twitter.com/hashtag/climateclock?f=tweets) hashtag.
+####In the meantime, share your efforts and results via the [#ActInTime](https://twitter.com/hashtag/actintime?f=tweets) hashtag.
 
 ####And download the #ClimateClock Widget.
 :end
 
-button: Download maker kit
+button: Make a CLIMATECLOCK
 link: make
 
 ---
@@ -119,7 +125,7 @@ content2: Help us put a [#ClimateClock](https://twitter.com/hashtag/climateclock
 
 ####· **[Donating to our gofundme](https://www.gofundme.com/f/fd997b-help-us)**
 
-####· Spreading the word via the [#ClimateClock](https://twitter.com/hashtag/climateclock?f=tweets) hashtag
+####· Spreading the word via the [#ActInTime](https://twitter.com/hashtag/actintime?f=tweets) hashtag
 
 ####· Organizing in your community
 
@@ -145,7 +151,7 @@ content1: ####The mobile climate clock Greta is carying with her (and will share
 
 
 content2:
-Please consider **[donating to our gofundme](https://www.gofundme.com/f/fd997b-help-us)** and spreading the word via the [#ClimateClock](https://twitter.com/hashtag/climateclock?f=tweets) hashtag.
+Please consider **[donating to our gofundme](https://www.gofundme.com/f/fd997b-help-us)** and spreading the word via the [#ActInTime](https://twitter.com/hashtag/actintime?f=tweets) hashtag.
 
 Contact us at info (at) climateclock (dot) world, or leave us your email and we'll keep in touch.
 
