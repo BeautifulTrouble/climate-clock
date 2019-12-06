@@ -13,6 +13,11 @@
                   <router-link v-if="item.link.slice(0, 4) != 'http'" :to="item.link"><h3>{{ item.title }}</h3></router-link>
                   <a v-else :href="item.link" target="_blank"><h3>{{ item.title }}</h3></a>
                 </div>
+                <!--
+                <div class="hide-md-up">
+                  <a v-smooth-scroll="{duration: 250}" href="#bottom" class="css-menu"></a>
+                </div>
+                -->
               </menu>
               <climate-clock id="climate-clock"></climate-clock>
               <router-link class="button" to="widget">{{ content.widget_button }}</router-link>
@@ -51,6 +56,7 @@
           </div>
         </section>
         <router-view></router-view>
+        <a id="bottom"></a>
         <footer>
           <menu>
             <div v-for="(item, i) in content.menu" :key="i">
@@ -59,6 +65,26 @@
               <a v-else :href="item.link" target="_blank"><h3>{{ item.title }}</h3></a>
             </div>
           </menu>
+          <div class="signup">
+            <div>
+              <p style="color: black">Contact us at info (at) climateclock (dot) world,<br>or leave us your email and we'll keep in touch.</p>
+              <!-- TODO: clean this up -->
+              <form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+              <div class="mc-field-group">
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+              </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2aa3b5c34f535e74090f9098d_e450999d72" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                  </div>
+              </form>
+              <p>&copy; 2019</p>
+            </div>
+          </div>
         </footer>
       </div>
     </div>
@@ -117,6 +143,22 @@ menu {
       font-size: 3rem;
     }
   }
+  .css-menu {
+    position: relative;
+    padding-left: 1.25em;
+  }
+  .css-menu:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 1em;
+    height: 0.15em;
+    background: black;
+    box-shadow: 
+      0 0.25em 0 0 black,
+      0 0.5em 0 0 black;
+  }
 }
 #hero {
   border: 1px solid $light;
@@ -142,5 +184,20 @@ menu {
 }
 footer {
   margin: 5rem 0 10rem 0;
+  p {
+    font-size: .75rem;
+  }
+  p, form {
+    color: #ccc;
+    margin: .5rem 0;
+  }
+  div.signup {
+    padding-top: 2rem;
+    @include breakpoint($upper) {
+      padding-top: 4rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 </style>
