@@ -5,21 +5,27 @@ header_small: #CLIMATE<br>CLOCK
 [menu]
 title: Home
 link: #top
+type: link
 
 title: About
 link: about
+type: route
 
 title: Science
 link: science
+type: route
 
 title: Make
 link: make
+type: route
 
 title: Join
 link: https://forms.gle/AvAdquospNWgTABT6
+type: link
 
 title: Donate
 link: donate
+type: route
 []
 
 

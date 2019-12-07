@@ -10,8 +10,8 @@
               <router-link to="/" class="hide-sm" v-html="markdown(content.header)"></router-link>
               <menu>
                 <div class="hide-sm" v-for="(item, i) in content.menu.slice(1)" :key="i">
-                  <router-link v-if="item.link.slice(0, 4) != 'http'" :to="item.link"><h3>{{ item.title }}</h3></router-link>
-                  <a v-else :href="item.link" target="_blank"><h3>{{ item.title }}</h3></a>
+                  <router-link v-if="item.type == 'route'" :to="item.link"><h3>{{ item.title }}</h3></router-link>
+                  <a v-else-if="item.type == 'link'" :href="item.link" target="_blank"><h3>{{ item.title }}</h3></a>
                 </div>
                 <!--
                 <div class="hide-md-up">
@@ -35,7 +35,7 @@
                 >
                 <slide v-for="(slide, i) in content.slides" :key="i">
                   <youtube-player v-if="slide.type == 'youtube'" :video-id="slide.link"></youtube-player>
-                  <img v-if="slide.type == 'image'" :src="slide.link" style="width:100%;">
+                  <img v-else-if="slide.type == 'image'" :src="slide.link" style="width:100%;">
                   <h2>{{ slide.caption }}</h2>
                 </slide>
               </carousel>
@@ -47,9 +47,9 @@
         <footer>
           <menu>
             <div v-for="(item, i) in content.menu" :key="i">
-              <a v-if="item.link == '#top'" v-smooth-scroll="{duration: 250}" href="#top"><h3>HOME</h3></a>
-              <router-link v-else-if="item.link.slice(0, 4) != 'http'" :to="item.link"><h3>{{ item.title }}</h3></router-link>
-              <a v-else :href="item.link" target="_blank"><h3>{{ item.title }}</h3></a>
+              <a v-if="item.link.slice(0, 1) == '#'" v-smooth-scroll="{duration: 250}" :href="item.link"><h3>{{ item.title }}</h3></a>
+              <router-link v-else-if="item.type == 'route'" :to="item.link"><h3>{{ item.title }}</h3></router-link>
+              <a v-else-if="item.type == 'link'" :href="item.link" target="_blank"><h3>{{ item.title }}</h3></a>
             </div>
           </menu>
           <div class="signup">
