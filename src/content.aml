@@ -25,12 +25,24 @@ link: donate
 
 widget_button: Download Widget
 
-- Currently we can only use youtube videos
-  TODO make this an array of slides
-video: https://www.youtube.com/watch?v=ZWjvR055OlE
-video_caption: UN Climate Action Summit
-video_projection: https://youtube.com/watch?v=SzsdC0_9E-I
-video_projection_caption: You may have seen our clocks
+
+[slides]
+link: https://youtube.com/watch?v=SzsdC0_9E-I
+caption: You may have seen our clocks
+type: youtube
+
+link: /img/8yearsleft.jpg
+caption: Spread the word
+type: image
+
+link: https://www.youtube.com/watch?v=ZWjvR055OlE
+caption: UN Climate Action Summit
+type: youtube
+
+link: /img/ifwearetosurvive.jpg
+caption: Let's make it a lifeline
+type: image
+[]
 
 
 [clocks]

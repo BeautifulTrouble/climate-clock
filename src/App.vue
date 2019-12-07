@@ -33,23 +33,10 @@
                 :autoplayTimeout="10000"
                 :loop="true"
                 >
-                <!--
-                <slide>
-                  <youtube-player :video-id="content.video_projection"></youtube-player>
-                  <h2>{{ content.video_projection_caption }}</h2>
-                </slide>
-                -->
-                <slide>
-                  <img src="/img/8yearsleft.jpg" style="width:100%;">
-                  <h2>Spread the word</h2>
-                </slide>
-                <slide>
-                  <youtube-player :video-id="content.video"></youtube-player>
-                  <h2>{{ content.video_caption }}</h2>
-                </slide>
-                <slide>
-                  <img src="/img/ifwearetosurvive.jpg" style="max-width:100%;">
-                  <h2>Let's make it a lifeline</h2>
+                <slide v-for="(slide, i) in content.slides" :key="i">
+                  <youtube-player v-if="slide.type == 'youtube'" :video-id="slide.link"></youtube-player>
+                  <img v-if="slide.type == 'image'" :src="slide.link" style="width:100%;">
+                  <h2>{{ slide.caption }}</h2>
                 </slide>
               </carousel>
             </div>
@@ -82,7 +69,6 @@
                   <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                   </div>
               </form>
-              <p>&copy; 2019</p>
             </div>
           </div>
         </footer>
@@ -185,11 +171,7 @@ menu {
 footer {
   margin: 5rem 0 10rem 0;
   p {
-    font-size: .75rem;
-  }
-  p, form {
-    color: #ccc;
-    margin: .5rem 0;
+    font-size: .8rem;
   }
   div.signup {
     padding-top: 2rem;
