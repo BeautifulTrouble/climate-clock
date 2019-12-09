@@ -251,11 +251,18 @@ export default {
       padding: .15rem .8rem .4rem .8rem;
     }
   }
+  input[type=email] {
+    width: 100%;
+    padding: .35rem .7rem;
+  }
   @include breakpoint($sm) {
     position: fixed;
     top: 0; left: 0;
     bottom: 0; right: 0;
     overflow-y: scroll;
+    input[type=submit] {
+      margin-top: .5rem !important;
+    }
   }
 }
 .makerkit {

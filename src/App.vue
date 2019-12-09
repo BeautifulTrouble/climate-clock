@@ -21,9 +21,7 @@
               <div id="signup">
                 <h3>{{ content.signup }}</h3>
                 <form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="EMAIL">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email">
                     <div style="position: absolute; left: -5000px;" aria-hidden="true">
                       <input type="text" name="b_2aa3b5c34f535e74090f9098d_e450999d72" tabindex="-1" value="">
                     </div>
@@ -41,8 +39,7 @@
                 :autoplay="true"
                 :autoplayTimeout="6000"
                 :autoplayHoverPause="false"
-                :loop="true"
-                >
+                :loop="true">
                 <slide v-for="(slide, i) in content.slides" :key="i">
                   <youtube-player v-if="slide.type == 'youtube'" 
                     :video-id="slide.content"
@@ -173,7 +170,7 @@ menu {
     display: inline-block;
   }
   input[type=email] {
-    padding: .35rem;
+    padding: .35rem .7rem;
     margin: 0;
     margin-right: .75rem;
     border: 1px solid $light
@@ -231,8 +228,6 @@ menu {
       font-size: 1rem;
       margin: .5rem 0 0 0;
     }
-  }
-  .image {
   }
 }
 .VueCarousel-dot, .VueCarousel-dot-container {
