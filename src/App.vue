@@ -22,18 +22,16 @@
                 -->
               </menu>
               <div id="signup">
-                <div>
-                  <h3>{{ content.signup }}</h3>
-                  <form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="EMAIL">
-                      <div class="response" id="mce-error-response" style="display:none"></div>
-                      <div class="response" id="mce-success-response" style="display:none"></div>
-                      <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_2aa3b5c34f535e74090f9098d_e450999d72" tabindex="-1" value="">
-                      </div>
-                      <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
-                  </form>
-                </div>
+                <h3>{{ content.signup }}</h3>
+                <form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="EMAIL">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                      <input type="text" name="b_2aa3b5c34f535e74090f9098d_e450999d72" tabindex="-1" value="">
+                    </div>
+                    <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </form>
               </div>
             </div>
           </div>
@@ -157,11 +155,15 @@ menu {
 }
 #signup {
   border: 1px solid $light;
-  padding: 1rem 2.5rem .75rem 2.5rem;
+  padding: .75rem 1rem .75rem 1rem;
   text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 800;
     margin: 0;
     text-transform: uppercase;
@@ -169,28 +171,39 @@ menu {
   }
   form {
     display: inline-block;
-
   }
   input[type=email] {
-    padding: .25rem;
+    padding: .35rem;
+    margin: 0;
     margin-right: .75rem;
-    margin-top: .5rem;
     border: 1px solid $light
   }
   input[type=submit] {
-    padding: .3rem 1rem .4rem 1rem;
+    margin: 0;
+    padding: .35rem 1rem .4rem 1rem;
     font-size: .9rem;
   }
   @include breakpoint($md) {
     h3 {
-      font-size: 1.2rem;
+      font-size: .8rem;
+    }
+  }
+  @include breakpoint($md-plus) {
+    h3 {
+      font-size: 1.05rem;
     }
   }
   @include breakpoint($sm) {
     padding: .75rem .75rem .5rem .75rem;
     margin-top: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
     h3 {
       font-size: .9rem;
+      display: block;
+    }
+    form {
+      display: block;
     }
     input[type=submit] {
       font-size: .75rem;
