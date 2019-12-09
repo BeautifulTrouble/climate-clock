@@ -76,8 +76,8 @@
           </menu>
           <div class="branding">
             <div>
-              <div class="logo"></div>
-              <p>{{ content.footer }}</p>
+              <a href="https://beautifultrouble.org" target="_blank"><div class="logo"></div></a>
+              <p v-html="markdown(content.footer)"></p>
             </div>
           </div>
         </footer>
@@ -221,9 +221,10 @@ menu {
 }
 footer {
   menu {
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
   }
   .branding {
+    margin-bottom: 2rem;
     width: 100%;
     display: flex;
     flex-direction: column;
