@@ -6,20 +6,17 @@
         <header>
           <div class="row">
             <div class="col-sm-12">
-              <router-link to="/" class="hide-md-up" v-html="markdown(content.header_small)"></router-link>
+              <div class="mobile-menu">
+                <a v-smooth-scroll="{duration: 250}" href="#bottom" class="hide-md-up" v-html="markdown(content.header_small)"></a>
+              </div>
               <climate-clock id="climate-clock"></climate-clock>
               <router-link class="button widget" to="widget">{{ content.widget_button }}</router-link>
               <router-link to="/" class="hide-sm" v-html="markdown(content.header)"></router-link>
               <menu>
-                <div class="hide-sm" v-for="(item, i) in content.menu" :key="i">
+                <div class="hide-sm" v-for="(item, i) in content.menu.slice(1)" :key="i">
                   <router-link v-if="item.type == 'route'" :to="item.link"><h3>{{ item.title }}</h3></router-link>
                   <a v-else-if="item.type == 'link'" :href="item.link" target="_blank"><h3>{{ item.title }}</h3></a>
                 </div>
-                <!--
-                <div class="hide-md-up">
-                  <a v-smooth-scroll="{duration: 250}" href="#bottom" class="css-menu"></a>
-                </div>
-                -->
               </menu>
               <div id="signup">
                 <h3>{{ content.signup }}</h3>
@@ -70,7 +67,8 @@
         <footer>
           <menu>
             <div v-for="(item, i) in content.menu" :key="i">
-              <a v-if="item.link.slice(0, 1) == '#'" v-smooth-scroll="{duration: 250}" :href="item.link"><h3>{{ item.title }}</h3></a>
+              <!-- Currently this is only the "home" link but ALL #hash links will be hidden on desktop -->
+              <a v-if="item.link.slice(0, 1) == '#'" v-smooth-scroll="{duration: 250}" :href="item.link" class="hide-md-up"><h3>{{ item.title }}</h3></a>
               <router-link v-else-if="item.type == 'route'" :to="item.link"><h3>{{ item.title }}</h3></router-link>
               <a v-else-if="item.type == 'link'" :href="item.link" target="_blank"><h3>{{ item.title }}</h3></a>
             </div>
@@ -121,6 +119,22 @@ header {
   menu {
     margin: 0 0 3rem 0
   }
+  .mobile-menu {
+    position: relative;
+    padding-right: 1.25em;
+    z-index: 1;
+  }
+  .mobile-menu:before {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    bottom: 3.85rem;
+    width: 2rem;
+    height: 0.3rem;
+    background: black;
+    // Use pixels for better rendering
+    box-shadow: 0 12px 0 0 black, 0 24px 0 0 black;
+  }
 }
 menu {
   padding: 0;
@@ -137,22 +151,6 @@ menu {
       margin: 0;
       font-size: 3rem;
     }
-  }
-  .css-menu {
-    position: relative;
-    padding-left: 1.25em;
-  }
-  .css-menu:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.25em;
-    width: 1em;
-    height: 0.15em;
-    background: black;
-    box-shadow: 
-      0 0.25em 0 0 black,
-      0 0.5em 0 0 black;
   }
 }
 #signup {

@@ -7,6 +7,10 @@ header_small: #CLIMATE<br>CLOCK
 
 
 [menu]
+title: Home
+link: #top
+type: link
+
 title: About
 link: about
 type: route
