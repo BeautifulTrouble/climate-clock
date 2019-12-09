@@ -25,7 +25,7 @@
                 <div>
                   <h3>{{ content.signup }}</h3>
                   <form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email">
+                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="EMAIL">
                       <div class="response" id="mce-error-response" style="display:none"></div>
                       <div class="response" id="mce-success-response" style="display:none"></div>
                       <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -115,7 +115,7 @@ header {
   h1 {
     padding: 3rem 0 0 0;
     @include breakpoint($sm) {
-      padding: 4rem 0 2rem 0;
+      padding: .5rem 0 2rem 0;
     }
   }
   menu {
@@ -165,11 +165,17 @@ menu {
     font-weight: 800;
     margin: 0;
     text-transform: uppercase;
+    display: inline-block;
+  }
+  form {
+    display: inline-block;
+
   }
   input[type=email] {
     padding: .25rem;
     margin-right: .75rem;
     margin-top: .5rem;
+    border: 1px solid $light
   }
   input[type=submit] {
     padding: .3rem 1rem .4rem 1rem;
@@ -236,7 +242,7 @@ footer {
       width: 50%;
       max-width: 300px;
       @include breakpoint($sm) {
-        width: 75%;
+        width: 100%;
         max-width: none;
       }
     }
@@ -245,6 +251,10 @@ footer {
       background-size: cover;
       background-repeat: no-repeat;
       padding-top: 49%;
+      @include breakpoint($sm) {
+        width: 50%;
+        padding-top: 24%;
+      }
     }
   }
 }
