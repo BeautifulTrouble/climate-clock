@@ -37,7 +37,7 @@
       <transition name="fade">
         <div v-if="page != 'home'" @click="$router.push('/')" class="overlay hide-sm"></div>
       </transition>
-      <transition name="fade-left">
+      <transition name="fade">
         <div v-if="page != 'home'" class="modal-background">
           <div class="wrapper container-fluid">
             <div class="row">
@@ -45,31 +45,37 @@
                 <!-- Here are the page-specific modals -->
                 <div class="modal">
                   <router-link to="/" class="button close">x</router-link>
-                  <div v-for="(p, i) in content.ctas" :key="i">
-                    <div v-if="page == p.link" class="row">
-                      <div class="col-sm-12">
-                        <h2>{{ p.button }}</h2>
+                  <div v-if="page == 'make'" class="row">
+                    <h2>Make a CLIMATECLOCK</h2>
+                    <div v-html="markdown(makerkit)" class="col-sm-12 makerkit"></div>
+                  </div>
+                  <div v-else>
+                    <div v-for="(p, i) in content.ctas" :key="i">
+                      <div v-if="page == p.link" class="row">
+                        <div class="col-sm-12">
+                          <h2>{{ p.button }}</h2>
+                        </div>
+                        <!-- Special case all the special features on specific pages -->
+                        <div v-if="p.content" v-html="markdown(p.content)" class="col-sm-12"></div>
+                        <div v-if="p.content1" v-html="markdown(p.content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
+                        <div v-if="p.content2" v-html="markdown(p.content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
+                        <div v-if="p.content3" v-html="markdown(p.content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
                       </div>
-                      <!-- Special case all the special features on specific pages -->
-                      <div v-if="p.content" v-html="markdown(p.content)" class="col-sm-12"></div>
-                      <div v-if="p.content1" v-html="markdown(p.content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
-                      <div v-if="p.content2" v-html="markdown(p.content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
-                      <div v-if="p.content3" v-html="markdown(p.content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
                     </div>
-                  </div>
-                  <div v-if="page == 'about'" class="row">
-                    <div class="col-sm-12">
-                      <h2>{{ content.pages[0].title }}</h2>
+                    <div v-if="page == 'about'" class="row">
+                      <div class="col-sm-12">
+                        <h2>{{ content.pages[0].title }}</h2>
+                      </div>
+                      <div v-html="markdown(content.pages[0].content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
+                      <div v-html="markdown(content.pages[0].content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
+                      <div v-html="markdown(content.pages[0].content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
                     </div>
-                    <div v-html="markdown(content.pages[0].content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
-                    <div v-html="markdown(content.pages[0].content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
-                    <div v-html="markdown(content.pages[0].content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
-                  </div>
-                  <div v-if="page == 'widget'" class="row">
-                    <div class="col-sm-12">
-                      <h2>{{ content.pages[1].title }}</h2>
+                    <div v-if="page == 'widget'" class="row">
+                      <div class="col-sm-12">
+                        <h2>{{ content.pages[1].title }}</h2>
+                      </div>
+                      <div v-html="markdown(content.pages[1].content)" class="col-sm-12"></div>
                     </div>
-                    <div v-html="markdown(content.pages[1].content)" class="col-sm-12"></div>
                   </div>
                 </div>
               </div>
@@ -83,10 +89,12 @@
 
 <script>
 import content from './content.aml'
+import makerkit from '../climate-clock-kit/instructions/instructions.md'
 
 export default {
   data: () => ({
     content: content,
+    makerkit: makerkit,
     // TODO: sheesh I'm tired
     clock0: false,
     clock1: false,
@@ -207,10 +215,12 @@ export default {
 .modal {
   pointer-events: auto;
   position: relative;
-  bottom: 2rem;
+  //bottom: 2rem;
   background-color: white;
   border: 1px solid $light;
   padding: .5rem 1.5rem 1.5rem 1.5rem;
+  max-height: 100vh;
+  overflow-y: scroll;
   h1 {
     margin-top: 1rem;
     padding: 0;
@@ -238,6 +248,33 @@ export default {
     right: 1.5rem;
     @include breakpoint($sm) {
       padding: .15rem .8rem .4rem .8rem;
+    }
+  }
+  .makerkit {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    p:first-of-type img {
+      width: 100% !important;
+    }
+    blockquote:first-of-type p {
+      font-size: 1rem !important;
+    }
+    img {
+      width: 50% !important;
+      padding-right: 0;
+    }
+    ul {
+      padding-inline-start: 1rem;
+    }
+    blockquote {
+      padding: 0 1rem;
+      border: 1px solid $light;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
     }
   }
   @include breakpoint($sm) {

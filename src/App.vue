@@ -52,9 +52,12 @@
                     @playing="$refs.carousel.pauseAutoplay()"
                     @stopped="$refs.carousel.advancePage(1); $refs.carousel.startAutoplay()"
                     ></youtube-player>
-                  <a v-else-if="slide.type == 'image' && slide.link" :href="slide.link" target="_blank">
+                  <a v-else-if="slide.type == 'image' && slide.link.slice(0,4) == 'http'" :href="slide.link" target="_blank">
                     <img :src="slide.content" style="width:100%;">
                   </a>
+                  <router-link v-else-if="slide.type == 'image'" :to="slide.link">
+                    <img :src="slide.content" style="width:100%;">
+                  </router-link>
                   <img v-else-if="slide.type == 'image'" :src="slide.content" style="width:100%;">
                   <h2>{{ slide.caption }}</h2>
                 </slide>
