@@ -77,8 +77,6 @@
           </menu>
           <div class="branding">
             <div>
-              <a href="https://beautifultrouble.org" target="_blank"><div class="bt-logo"></div></a>
-              <a href="https://marchforscience.org" target="_blank"><div class="mfs-logo"></div></a>
               <p v-html="markdown(content.footer)"></p>
             </div>
           </div>

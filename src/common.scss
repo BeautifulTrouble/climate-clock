@@ -148,6 +148,12 @@ h3 {
 h4 {
   margin: .75rem 0;
 }
+hr {
+  border: none;
+  height: 1px;
+  background-color: $light;
+  margin: 2rem 0;
+}
 ol {
   padding-left: 1rem;
 }

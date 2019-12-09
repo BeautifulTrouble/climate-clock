@@ -43,11 +43,11 @@
             <div class="row">
               <div class="col-sm-12 col-md-10 col-md-offset-1">
                 <!-- Here are the page-specific modals -->
-                <div class="modal">
+                <div :class="{modal: true, makerkit: page == 'make'}">
                   <router-link to="/" class="button close">x</router-link>
                   <div v-if="page == 'make'" class="row">
                     <h2>Make a CLIMATECLOCK</h2>
-                    <div v-html="markdown(makerkit)" class="col-sm-12 makerkit"></div>
+                    <div v-html="markdown(makerkit)" class="col-sm-12"></div>
                   </div>
                   <div v-else>
                     <div v-for="(p, i) in content.ctas" :key="i">
@@ -218,12 +218,10 @@ export default {
 .modal {
   pointer-events: auto;
   position: relative;
-  //bottom: 2rem;
   background-color: white;
   border: 1px solid $light;
   padding: .5rem 1.5rem 1.5rem 1.5rem;
   max-height: 100vh;
-  overflow-y: scroll;
   h1 {
     margin-top: 1rem;
     padding: 0;
@@ -253,38 +251,39 @@ export default {
       padding: .15rem .8rem .4rem .8rem;
     }
   }
-  .makerkit {
-    h1 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1rem;
-    }
-    p:first-of-type img, p:last-of-type img {
-      width: 100% !important;
-    }
-    blockquote:first-of-type p {
-      font-size: 1rem !important;
-    }
-    img {
-      width: 50% !important;
-      padding-right: 0;
-    }
-    ul {
-      padding-inline-start: 1rem;
-    }
-    blockquote {
-      padding: 0 1rem;
-      border: 1px solid $light;
-      margin-inline-start: 0;
-      margin-inline-end: 0;
-    }
-  }
   @include breakpoint($sm) {
     position: fixed;
     top: 0; left: 0;
     bottom: 0; right: 0;
     overflow-y: scroll;
+  }
+}
+.makerkit {
+  overflow-y: scroll;
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  p:first-of-type img, p:last-of-type img {
+    width: 100% !important;
+  }
+  blockquote:first-of-type p {
+    font-size: 1rem !important;
+  }
+  img {
+    width: 50% !important;
+    padding-right: 0;
+  }
+  ul {
+    padding-inline-start: 1rem;
+  }
+  blockquote {
+    padding: 0 1rem;
+    border: 1px solid $light;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
   }
 }
 </style>
