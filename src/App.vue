@@ -42,7 +42,7 @@
               <carousel ref="carousel"
                 :perPage="1"
                 :autoplay="true"
-                :autoplayTimeout="10000"
+                :autoplayTimeout="6000"
                 :autoplayHoverPause="false"
                 :loop="true"
                 >
