@@ -6,6 +6,10 @@ module.exports = {
       .test(/.+\.aml$/)
       .use('@newsdev/archieml-loader')
         .loader('@newsdev/archieml-loader')
-        .end()
+    config.module
+      .rule('rawmarkdown')
+      .test(/.+\.md$/)
+      .use('raw-loader')
+        .loader('raw-loader')
   },
 }

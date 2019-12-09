@@ -32,7 +32,6 @@ $yarn build
 cd ../site
 ln -s ../climate-clock-widget/dist/widget-v1.js
 ln -s ../climate-clock-widget/dist/iframe.html
-ln -s ../../climate-clock-kit/instructions/img/makerkit img/makerkit
 
 
 # TEMPORARY maker kit image hosting
