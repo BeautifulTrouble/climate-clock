@@ -44,7 +44,7 @@
               <carousel ref="carousel"
                 :perPage="1"
                 :autoplay="true"
-                :autoplayTimeout="6000"
+                :autoplayTimeout="10000"
                 :autoplayHoverPause="false"
                 :loop="true"
                 >
