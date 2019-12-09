@@ -179,7 +179,6 @@ Please consider **[donating to our gofundme](https://www.gofundme.com/f/fd997b-h
 
 Contact us at info (at) climateclock (dot) world, or leave us your email and we'll keep in touch.
 
-<!-- TODO: clean this up -->
 <form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
   <input type="email" value="" name="EMAIL" placeholder="email" class="required email" id="mce-EMAIL">
   <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -218,5 +217,5 @@ We're working on a design you can customize, so stay tuned or contribute a pull 
 []
 
 
-footer: ClimateClock.world is powered by climate scientists, artists, educators, and activists across the world with support from <br>![Beautiful Trouble](/img/bt_logo.png) and &nbsp;&nbsp;![March for Science](/img/mfs_logo.png)
+footer: ClimateClock.world is powered by climate scientists, artists, educators, and activists across the world with support from <br>[![Beautiful Trouble](/img/bt_logo.png)](https://beautifultrouble.org) and &nbsp;[![March for Science](/img/mfs_logo.png)](https://marchforscience.org)
 
