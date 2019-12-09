@@ -41,7 +41,7 @@ export default {
           Math.floor(Math.random() * 1024);
 
         // eslint-disable-next-line
-        this.YTPLayer = new YT.Player(player.id, {
+        this.YTPlayer = new YT.Player(player.id, {
           height: '360',
           width: '640',
           videoId: this.youtubeVideoID,
@@ -49,6 +49,9 @@ export default {
             rel: 0, 
             showinfo: 0,
             modestbranding: 1
+          },
+          events: {
+            'onStateChange': this.playerStateChanged
           }
         });
       }, // eslint-disable-next-line
@@ -98,7 +101,17 @@ export default {
       tag.src = "https://www.youtube.com/iframe_api";
       tag.className = "yt-frame-api";
       first.parentNode.insertBefore(tag, first);
-    }
+    },
+    playerStateChanged(event) {
+      // eslint-disable-next-line
+      if (event.data == YT.PlayerState.PLAYING) {
+        this.$emit('playing')
+      // eslint-disable-next-line
+      } else if (event.data == YT.PlayerState.ENDED) {
+        this.$emit('stopped')
+        this.YTPlayer.cueVideoById(this.youtubeVideoID)
+      }
+    },
   }
 }
 </script>
