@@ -163,7 +163,7 @@ menu {
   align-items: center;
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 800;
     margin: 0;
     text-transform: uppercase;
