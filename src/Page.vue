@@ -257,7 +257,7 @@ export default {
     p {
       font-size: 1rem;
     }
-    p:first-of-type img {
+    p:first-of-type img, p:last-of-type img {
       width: 100% !important;
     }
     blockquote:first-of-type p {
