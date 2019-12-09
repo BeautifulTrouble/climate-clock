@@ -182,6 +182,9 @@ export default {
   }
   .button {
     display: inline-block;
+    @include breakpoint($sm) {
+      margin: 0 0 2rem 0;
+    }
   }
   @include breakpoint($upper) {
     .cta {

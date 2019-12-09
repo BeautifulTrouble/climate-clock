@@ -77,7 +77,8 @@
           </menu>
           <div class="branding">
             <div>
-              <a href="https://beautifultrouble.org" target="_blank"><div class="logo"></div></a>
+              <a href="https://beautifultrouble.org" target="_blank"><div class="bt-logo"></div></a>
+              <a href="https://marchforscience.org" target="_blank"><div class="mfs-logo"></div></a>
               <p v-html="markdown(content.footer)"></p>
             </div>
           </div>
@@ -256,21 +257,15 @@ footer {
     }
     > div {
       width: 50%;
-      max-width: 300px;
+      max-width: 17rem;
+      font-size: .9rem;
       @include breakpoint($sm) {
         width: 100%;
-        max-width: none;
       }
     }
-    .logo {
-      background-image: url(/img/bt.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      padding-top: 49%;
-      @include breakpoint($sm) {
-        width: 50%;
-        padding-top: 24%;
-      }
+    img {
+      margin-bottom: -1rem;
+      margin-top: -.1rem;
     }
   }
 }
