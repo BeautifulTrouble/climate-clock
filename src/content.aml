@@ -46,9 +46,8 @@ caption: UN Climate Action Summit
 type: youtube
 
 content: img/ifwearetosurvive.jpg
-caption: Spread the word
+caption_markdown: ## Spread the word on [Twitter](https://twitter.com/intent/tweet?text=Join%20me%20and%20%40theclimateclock%20get%20the%20most%20important%20number%20up%20everywhere%20in%20the%20world%20%23ActInTime%20%23CLIMATECLOCK%20https%3A//climateclock.world) and [Facebook](https://www.facebook.com/sharer/sharer.php?u=climateclock.world)
 type: image
-link: https://twitter.com/theclimateclock 
 
 content: img/makerkit.jpg
 caption: Check out our Maker Kit
