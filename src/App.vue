@@ -241,6 +241,9 @@ menu {
 footer {
   menu {
     margin-bottom: 6rem;
+    @include breakpoint($sm) {
+      margin-bottom: 4rem;
+    }
   }
   .branding {
     margin-bottom: 2rem;
