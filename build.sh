@@ -29,11 +29,8 @@ git submodule update
 cd climate-clock-widget
 $yarn install
 $yarn build
-cd ../site
-ln -s ../climate-clock-widget/dist/widget-v1.js
-ln -s ../climate-clock-widget/dist/iframe.html
-
 
 # TEMPORARY maker kit image hosting
+cd ../site
 for i in ~/climate-clock-images/*.img; do ln -s $i; done
 
