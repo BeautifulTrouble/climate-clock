@@ -3,3 +3,6 @@
 	url = https://github.com/beautifultrouble/climate-clock-widget.git
 	branch = master
 	update = merge
+[submodule "climate-clock-kit"]
+	path = climate-clock-kit
+	url = https://github.com/BeautifulTrouble/climate-clock-kit
