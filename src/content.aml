@@ -1,12 +1,12 @@
+
+widget_button: Download Widget
+
+
 header: #CLIMATECLOCK
 header_small: #CLIMATE<br>CLOCK
 
 
 [menu]
-title: Home
-link: #top
-type: link
-
 title: About
 link: about
 type: route
@@ -20,7 +20,7 @@ link: make
 type: route
 
 title: Join
-link: https://forms.gle/AvAdquospNWgTABT6
+link: http://eepurl.com/gD4Np1
 type: link
 
 title: Donate
@@ -29,21 +29,27 @@ type: route
 []
 
 
-widget_button: Download Widget
+signup: Sign up to bring the clock to your city, school, or community
 
 
 [slides]
-link: https://www.youtube.com/watch?v=scLpDOw2x9c
+content: https://www.youtube.com/watch?v=scLpDOw2x9c
 caption: You may have seen our clocks...
 type: youtube
 
-link: https://www.youtube.com/watch?v=ZWjvR055OlE
+content: https://www.youtube.com/watch?v=ZWjvR055OlE
 caption: UN Climate Action Summit
 type: youtube
 
-link: /img/ifwearetosurvive.jpg
+content: img/ifwearetosurvive.jpg
 caption: Spread the word
 type: image
+link: https://twitter.com/theclimateclock
+
+content: img/makerkit.jpg
+caption: Check out our Maker Kit
+type: image
+link: https://github.com/BeautifulTrouble/climate-clock-kit/blob/master/instructions/instructions.md
 []
 
 
@@ -212,3 +218,6 @@ Some blogging systems will only accept HTML tags from a whitelist, so the `<clim
 We're working on a design you can customize, so stay tuned or contribute a pull request.
 :end
 []
+
+
+footer: CLIMATECLOCK.WORLD is powered by Beautiful Trouble, and scientists, artists, and educators across the world.

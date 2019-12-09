@@ -123,7 +123,6 @@ h1 {
   font-weight: 800;
   color: $text;
   margin: 0;
-  padding: 4rem 0 1.5rem 0;
   line-height: 1;
   @include breakpoint($sm) {
     font-size: 3.5rem;
@@ -133,7 +132,7 @@ h1 {
 }
 h2 {
   margin: 1rem 0;
-  font-size: 1.85rem;
+  font-size: 1.7rem;
   font-weight: normal;
   @include breakpoint($md) {
     font-size: 1.35rem;

@@ -7,9 +7,11 @@
           <div class="row">
             <div class="col-sm-12">
               <router-link to="/" class="hide-md-up" v-html="markdown(content.header_small)"></router-link>
+              <climate-clock id="climate-clock"></climate-clock>
+              <router-link class="button widget" to="widget">{{ content.widget_button }}</router-link>
               <router-link to="/" class="hide-sm" v-html="markdown(content.header)"></router-link>
               <menu>
-                <div class="hide-sm" v-for="(item, i) in content.menu.slice(1)" :key="i">
+                <div class="hide-sm" v-for="(item, i) in content.menu" :key="i">
                   <router-link v-if="item.type == 'route'" :to="item.link"><h3>{{ item.title }}</h3></router-link>
                   <a v-else-if="item.type == 'link'" :href="item.link" target="_blank"><h3>{{ item.title }}</h3></a>
                 </div>
@@ -19,23 +21,43 @@
                 </div>
                 -->
               </menu>
-              <climate-clock id="climate-clock"></climate-clock>
-              <router-link class="button" to="widget">{{ content.widget_button }}</router-link>
+              <div id="signup">
+                <div>
+                  <h3>{{ content.signup }}</h3>
+                  <form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_2aa3b5c34f535e74090f9098d_e450999d72" tabindex="-1" value="">
+                      </div>
+                      <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </header>
         <section id="hero">
           <div class="row">
             <div class="col-sm-12">
-              <carousel 
+              <carousel ref="carousel"
                 :perPage="1"
                 :autoplay="true"
-                :autoplayTimeout="10000"
+                :autoplayTimeout="6000"
+                :autoplayHoverPause="false"
                 :loop="true"
                 >
                 <slide v-for="(slide, i) in content.slides" :key="i">
-                  <youtube-player v-if="slide.type == 'youtube'" :video-id="slide.link"></youtube-player>
-                  <img v-else-if="slide.type == 'image'" :src="slide.link" style="width:100%;">
+                  <youtube-player v-if="slide.type == 'youtube'" 
+                    :video-id="slide.content"
+                    @playing="$refs.carousel.pauseAutoplay()"
+                    @stopped="$refs.carousel.advancePage(1); $refs.carousel.startAutoplay()"
+                    ></youtube-player>
+                  <a v-else-if="slide.type == 'image' && slide.link" :href="slide.link" target="_blank">
+                    <img :src="slide.content" style="width:100%;">
+                  </a>
+                  <img v-else-if="slide.type == 'image'" :src="slide.content" style="width:100%;">
                   <h2>{{ slide.caption }}</h2>
                 </slide>
               </carousel>
@@ -52,23 +74,10 @@
               <a v-else-if="item.type == 'link'" :href="item.link" target="_blank"><h3>{{ item.title }}</h3></a>
             </div>
           </menu>
-          <div class="signup">
+          <div class="branding">
             <div>
-              <p style="color: black">Contact us at info (at) climateclock (dot) world,<br>or leave us your email and we'll keep in touch.</p>
-              <!-- TODO: clean this up -->
-              <form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                  <div id="mc_embed_signup_scroll">
-              <div class="mc-field-group">
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-              </div>
-                <div id="mce-responses" class="clear">
-                  <div class="response" id="mce-error-response" style="display:none"></div>
-                  <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2aa3b5c34f535e74090f9098d_e450999d72" tabindex="-1" value=""></div>
-                  <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                  </div>
-              </form>
+              <div class="logo"></div>
+              <p>{{ content.footer }}</p>
             </div>
           </div>
         </footer>
@@ -96,21 +105,21 @@ header {
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
-  .button {
+  margin: 1rem 0;
+  .button.widget {
     font-size: .75rem;
     float: right;
     padding: .3rem .5rem .2rem .5rem;
     margin: .5rem 0;
   }
-  h3 {
-    text-transform: uppercase;
-    color: $dark;
-    margin: 0 3rem;
+  h1 {
+    padding: 3rem 0 0 0;
     @include breakpoint($sm) {
-      margin: 0;
-      font-size: 3rem;
+      padding: 4rem 0 2rem 0;
     }
+  }
+  menu {
+    margin: 0 0 3rem 0
   }
 }
 menu {
@@ -146,6 +155,48 @@ menu {
       0 0.5em 0 0 black;
   }
 }
+#signup {
+  border: 1px solid $light;
+  padding: 1rem 2.5rem .75rem 2.5rem;
+  text-align: left;
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  input[type=email] {
+    padding: .25rem;
+    margin-right: .75rem;
+    margin-top: .5rem;
+  }
+  input[type=submit] {
+    padding: .3rem 1rem .4rem 1rem;
+    font-size: .9rem;
+  }
+  @include breakpoint($md) {
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+  @include breakpoint($sm) {
+    padding: .75rem .75rem .5rem .75rem;
+    margin-top: 3rem;
+    h3 {
+      font-size: .9rem;
+    }
+    input[type=submit] {
+      font-size: .75rem;
+      padding: .3rem .5rem .2rem .5rem;
+      margin: .5rem 0;
+    }
+    input[type=email] {
+      padding: .1rem .5rem;
+      font-size: .9rem;
+    }
+  }
+}
 #hero {
   border: 1px solid $light;
   padding: 1rem;
@@ -158,8 +209,8 @@ menu {
     margin: 1.25rem 0 .25rem 0;
     text-align: center;
     @include breakpoint($sm) {
-      font-size: 1.25rem;
-      margin: .5rem;
+      font-size: 1rem;
+      margin: .5rem 0 0 0;
     }
   }
   .image {
@@ -169,16 +220,30 @@ menu {
   margin-top: 0 !important;
 }
 footer {
-  margin: 5rem 0 10rem 0;
-  p {
-    font-size: .8rem;
+  menu {
+    margin-bottom: 10rem;
   }
-  div.signup {
-    padding-top: 2rem;
-    @include breakpoint($upper) {
-      padding-top: 4rem;
-      display: flex;
-      justify-content: center;
+  .branding {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint($sm) {
+      align-items: flex-start;
+    }
+    > div {
+      width: 50%;
+      max-width: 300px;
+      @include breakpoint($sm) {
+        width: 75%;
+        max-width: none;
+      }
+    }
+    .logo {
+      background-image: url(/img/bt.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding-top: 49%;
     }
   }
 }
