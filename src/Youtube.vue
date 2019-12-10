@@ -10,7 +10,8 @@
 <script>
 export default {
   props: {
-    'videoId': {type: String, default: null}
+    'videoId': {type: String, default: null},
+    'autoplay': {type: Boolean, default: false}
   },
   data: () => ({
     youtubeCallbackName: 'onYouTubeIframeAPIReady',
@@ -48,7 +49,8 @@ export default {
           playerVars: {
             rel: 0, 
             showinfo: 0,
-            modestbranding: 1
+            modestbranding: 1,
+            autoplay: +this.autoplay
           },
           events: {
             'onStateChange': this.playerStateChanged
@@ -82,7 +84,7 @@ export default {
     },
     hasYoutubeFrameAPI() {
       if (!this.hasYTFrame) {
-        this.hasYTFrame = !!(document.getElementsByClassName('.yt-frame-api').length);
+        this.hasYTFrame = !!(document.getElementsByClassName('yt-frame-api').length);
       }
       return this.hasYTFrame;
     },
