@@ -28,8 +28,8 @@ link: http://eepurl.com/gD4Np1
 type: link
 
 title: Donate
-link: donate
-type: route
+link: https://www.gofundme.com/f/fd997b-help-us
+type: link
 []
 
 
@@ -39,6 +39,10 @@ signup: Sign up to bring the clock to your city, school, or community
 [slides]
 content: https://www.youtube.com/watch?v=scLpDOw2x9c
 caption: You may have seen our clocks...
+type: youtube
+
+content: https://www.youtube.com/watch?v=c2mRGtQzu4I
+caption: ClimateClock goes up in New York
 type: youtube
 
 content: https://www.youtube.com/watch?v=ZWjvR055OlE
