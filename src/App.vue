@@ -36,15 +36,10 @@
             <div class="col-sm-12">
               <carousel ref="carousel"
                 :perPage="1"
-                :autoplay="false"
+                :autoplay="true"
                 :autoplayTimeout="6000"
                 :autoplayHoverPause="false"
                 :loop="true">
-                <slide>
-                  <div id="fb-root"></div>
-                  <div class="fb-video" data-autoplay="true" data-href="https://facebook.com/actdottv/videos/2915969241779765/" data-show-text="false"></div>
-                  <h2><a href="" target="_blank">#ClimateClock Launch LIVE on act.tv</a></h2>
-                </slide>
                 <slide v-for="(slide, i) in content.slides" :key="i">
                   <youtube-player v-if="slide.type == 'youtube'" 
                     :video-id="slide.content"
