@@ -45,6 +45,7 @@
                   <div class="fb-video" data-autoplay="true" data-href="https://facebook.com/actdottv/videos/2915969241779765/" data-show-text="false"></div>
                   <h2><a href="" target="_blank"><span class="blink">⬤</span> LIVE Tuesday December 12</a></h2>
                 </slide>
+                <!--
                 <slide v-for="(slide, i) in content.slides" :key="i">
                   <youtube-player v-if="slide.type == 'youtube'" 
                     :video-id="slide.content"
@@ -61,6 +62,7 @@
                   <div v-if="slide.caption_markdown" v-html="markdown(slide.caption_markdown)"></div>
                   <h2 v-else>{{ slide.caption }}</h2>
                 </slide>
+                -->
               </carousel>
             </div>
           </div>
