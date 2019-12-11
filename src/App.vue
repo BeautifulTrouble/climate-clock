@@ -36,10 +36,15 @@
             <div class="col-sm-12">
               <carousel ref="carousel"
                 :perPage="1"
-                :autoplay="true"
+                :autoplay="false"
                 :autoplayTimeout="6000"
                 :autoplayHoverPause="false"
                 :loop="true">
+                <slide>
+                  <div id="fb-root"></div>
+                  <div class="fb-video" data-autoplay="true" data-href="https://facebook.com/actdottv/videos/2915969241779765/" data-show-text="false"></div>
+                  <h2><a href="" target="_blank"><span class="blink">⬤</span> LIVE Tuesday December 12</a></h2>
+                </slide>
                 <slide v-for="(slide, i) in content.slides" :key="i">
                   <youtube-player v-if="slide.type == 'youtube'" 
                     :video-id="slide.content"
@@ -96,6 +101,15 @@ export default {
 
 <style lang="scss">
 @import './common';
+
+.blink {
+	animation: blink 1s infinite;
+}
+@keyframes blink {
+	0% { color: $accent; }
+	49%, 50%, 60%, 61% { color: transparent; }
+	100% { color: $accent; }
+}
 
 header {
   text-align: center;
