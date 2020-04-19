@@ -17,18 +17,23 @@ fi
 
 yarn=yarnpkg
 
+# Install new deps
 MD5="$(md5sum package.json)"
 git pull || exit
 [ "$MD5" = "$(md5sum package.json)" ] || $yarn install
+
+# Build main site
 $yarn build
 rm -rf site
 cp -a dist site
 
+# Build widget and copy js files to output directory
 git submodule init
 git submodule update
 cd climate-clock-widget
 $yarn install
 $yarn build
+cp -a dist/*.js ../site
 
 # TEMPORARY maker kit image hosting
 cd ../site
