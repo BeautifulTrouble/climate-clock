@@ -27,13 +27,12 @@ $yarn build
 rm -rf site
 cp -a dist site
 
-# Build widget and copy js files to output directory
+# Build widget (output files should be symlinked in the public directory of this repo)
 git submodule init
 git submodule update
 cd climate-clock-widget
 $yarn install
 $yarn build
-cp -a dist/*.js ../site
 
 # TEMPORARY maker kit image hosting
 cd ../site

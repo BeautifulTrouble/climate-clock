@@ -1,0 +1,1 @@
+../climate-clock-widget/dist/widget-v2.js

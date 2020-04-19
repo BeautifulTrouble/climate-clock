@@ -1,0 +1,1 @@
+../climate-clock-widget/dist/flatten.js
