@@ -205,7 +205,7 @@ It's still in its infancy, but you can contribute to the code [on github](https:
 To add the CLIMATECLOCK widget to your site, add the following HTML:
 
 ``` 
-<script src="https://climateclock.world/widget-v1.js" async></script>
+<script src="https://climateclock.world/widget-v2.js" async></script>
 <climate-clock></climate-clock>
 ``` 
 
