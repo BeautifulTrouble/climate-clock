@@ -33,12 +33,12 @@ type: link
 []
 
 
-signup: Sign up to bring the clock to your city, school, or community
+signup: Sign up to create a clock for your city, school, or community
 
 
 [slides]
 content: https://www.youtube.com/watch?v=scLpDOw2x9c
-caption: A Climate Clock for the World
+caption: The Climate Clock Explained
 type: youtube
 
 content: https://www.youtube.com/watch?v=c2mRGtQzu4I
@@ -66,13 +66,14 @@ title: Berlin 2019
 image: berlin.jpg
 description: ###\#ClimateClock [erected](https://www.mcc-berlin.net/en/news/information/information-detail/article/40-metre-carbon-clock-high-above-berlin.html) in Berlin September 18, 2019.
 
-title: Paris 2020
-image: paris.jpg
-description: ###We have to #ActInTime.
 
-title: New York 2020
+title: New York 2020 coming soon!
 image: newyork.jpg
 description: ###Put a #ClimateClock up in your city.
+
+title: Paris 2021
+image: paris.jpg
+description: ###We have to #ActInTime.
 []
 
 
