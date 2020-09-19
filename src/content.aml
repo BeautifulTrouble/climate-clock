@@ -37,15 +37,14 @@ signup: Sign up to create a clock for your city, school, or community
 
 
 for later
-content: img/usqnyc.jpg
-caption: Monumental Climate Clock goes up in center of New York
-type: image
-
 content: img/Greta_holding_clock.jpg
 caption: Greta with clock, before UN speech, Sept., 2019
 type: image
 
 [slides]
+content: img/usqnyc.jpg
+caption: Monumental Climate Clock goes up in center of New York
+type: image
 
 content: https://www.youtube.com/watch?v=m_NqyF9WQRk
 caption: The Climate Clock Explained
@@ -67,9 +66,8 @@ title: Berlin 2019
 image: berlin.jpg
 description: ###\#ClimateClock [erected](https://www.mcc-berlin.net/en/news/information/information-detail/article/40-metre-carbon-clock-high-above-berlin.html) in Berlin September 18, 2019.
 
-
 title: New York 2020 coming soon!
-image: newyork.jpg
+image: usqnyc.jpg
 description: ###Put a #ClimateClock up in your city.
 
 title: Paris 2021
