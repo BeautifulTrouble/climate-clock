@@ -1,5 +1,5 @@
 
-widget_button: Download Widget
+widget_button: Download App
 
 
 header: #CLIMATECLOCK
@@ -41,13 +41,9 @@ content: https://www.youtube.com/watch?v=scLpDOw2x9c
 caption: The Climate Clock Explained
 type: youtube
 
-content: https://www.youtube.com/watch?v=c2mRGtQzu4I
-caption: Why We Need A Climate Clock
-type: youtube
-
-content: https://www.youtube.com/watch?v=ZWjvR055OlE
-caption: UN Climate Action Summit
-type: youtube
+content: img/Greta_holding_clock.jpg
+caption: Greta with clock, before UN speech, Sept., 2019
+type: image
 
 content: img/maker_kit.jpg
 caption: How To Make A DIY ClimateClock
@@ -176,35 +172,41 @@ link: donate
 title: About
 link: about
 
+IF YOU NEED TO EDIT THE ABOUT SECTION, THERE ARE 3 COLUMNS, EACH DEFINED
+BETWEEN "content1/2/3:" AND THE CORRESPONDING ":end"
+
 content1: ####The mobile climate clock Greta now carries with her, as well as the larger CLIMATECLOCK project, was assembled by a team of artists, makers, scientists and activists based in New York, and is part of the Beautiful Trouble community of projects.
 
-FAQ
+Please consider **[donating to our gofundme](https://www.gofundme.com/f/fd997b-help-us)** and spreading the word via the [#ActInTime](https://twitter.com/hashtag/actintime?f=tweets) hashtag.
+:end
 
-Question 1
-Answer 2
 
-Question 2
-Answer 2
 
 content2:
-Please consider **[donating to our gofundme](https://www.gofundme.com/f/fd997b-help-us)** and spreading the word via the [#ActInTime](https://twitter.com/hashtag/actintime?f=tweets) hashtag.
+![Team photo](/img/about.jpg)
+Here we are. 
 
-Contact us at info (at) climateclock (dot) world, or leave us your email and we'll keep in touch.
+Contact us at info@climateclock.world, or leave us your email and we'll keep in touch.
 
 <form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
   <input type="email" value="" name="EMAIL" placeholder="email" class="required email" id="mce-EMAIL">
   <div style="position: absolute; left: -5000px;" aria-hidden="true">
     <input type="text" name="b_2aa3b5c34f535e74090f9098d_e450999d72" tabindex="-1" value="">
   </div>
-  <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe-2" class="button">
+  <input type="submit" value="Stay Updated" name="subscribe" id="mc-embedded-subscribe-2" class="button">
 </form>
 :end
 
 
+
 content3:
-![Team photo](/img/about.jpg)
-Here we are.
+###[NYC CLIMATECLOCK FAQ](https://docs.google.com/document/d/1vaFENGiF5Y9j5ZeVwkusuoYA__V0NwbAQ0fYvL898hE/export?format=pdf)
+####FOR MEDIA INQUIRIES<br>
+info@climateclock.world<br>
+\cc: blair@soundspeedpr.com<br>
+(202)503-6141
 :end
+
 
 ---
 
@@ -230,4 +232,9 @@ We're working on a design you can customize, so stay tuned or contribute a pull 
 
 
 footer: ClimateClock.world is powered by climate scientists, artists, educators, and activists across the world with support from <br>[![Beautiful Trouble](/img/bt_logo.png)](https://beautifultrouble.org) and &nbsp;[![March for Science](/img/mfs_logo.png)](https://marchforscience.org)
+
+<br>
+`tw:` [`@TheClimateClock`](https://twitter.com/TheClimateClock)<br>
+`fb:` [`theclimateclock`](https://www.facebook.com/theclimateclock)
+:end 
 

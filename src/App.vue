@@ -10,7 +10,10 @@
                 <a v-smooth-scroll="{duration: 250}" href="#bottom" class="hide-md-up" v-html="markdown(content.header_small)"></a>
               </div>
               <climate-clock id="climate-clock"></climate-clock>
+              <a href="/mobile" target="_blank" class="button widget">{{ content.widget_button }}</a>
+              <!--
               <router-link class="button widget" to="widget">{{ content.widget_button }}</router-link>
+              -->
               <router-link to="/" class="hide-sm" v-html="markdown(content.header)"></router-link>
               <menu>
                 <div class="hide-sm" v-for="(item, i) in content.menu.slice(1)" :key="i">
@@ -103,7 +106,7 @@ header {
   flex-direction: column;
   margin: 1rem 0;
   .button.widget {
-    font-size: .75rem;
+    font-size: 1.2rem;
     float: right;
     padding: .3rem .5rem .2rem .5rem;
     margin: .5rem 0;
