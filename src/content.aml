@@ -37,13 +37,10 @@ signup: Sign up to create a clock for your city, school, or community
 
 
 [slides]
+
 content: https://www.youtube.com/watch?v=scLpDOw2x9c
 caption: The Climate Clock Explained
 type: youtube
-
-content: img/Greta_holding_clock.jpg
-caption: Greta with clock, before UN speech, Sept., 2019
-type: image
 
 content: img/maker_kit.jpg
 caption: How To Make A DIY ClimateClock
@@ -53,7 +50,6 @@ link: make
 content: https://www.youtube.com/watch?v=7uGqvSveNMo
 caption: What COVID Teaches Us About Climate Change
 type: youtube
-
 []
 
 
