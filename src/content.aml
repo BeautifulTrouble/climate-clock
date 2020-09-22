@@ -36,7 +36,7 @@ type: link
 signup: Sign up to create a clock for your city, school, or community
 
 
-for later
+for later...
 content: img/Greta_holding_clock.jpg
 caption: Greta with clock, before UN speech, Sept., 2019
 type: image
@@ -48,6 +48,10 @@ type: image
 
 content: https://www.youtube.com/watch?v=m_NqyF9WQRk
 caption: The Climate Clock Explained
+type: youtube
+
+content: https://www.youtube.com/watch?v=c2mRGtQzu4I
+caption: Climate Clock first goes up in New York
 type: youtube
 
 content: https://www.youtube.com/watch?v=UEp-_tDYI_M
