@@ -179,17 +179,129 @@ link: donate
 title: About
 link: about
 
-IF YOU NEED TO EDIT THE ABOUT SECTION, THERE ARE 3 COLUMNS, EACH DEFINED
-BETWEEN "content1/2/3:" AND THE CORRESPONDING ":end"
 
-content1: ####The mobile climate clock Greta now carries with her, as well as the larger CLIMATECLOCK project, was assembled by a team of artists, makers, scientists and activists based in New York, and is part of the Beautiful Trouble community of projects.
 
-Please consider **[donating to our gofundme](https://www.gofundme.com/f/fd997b-help-us)** and spreading the word via the [#ActInTime](https://twitter.com/hashtag/actintime?f=tweets) hashtag.
+content1: ####[The Climate Clock is a collaboration of artists, scientists and activists and is part of the Beautiful Trouble community of projects.](https://beautifultrouble.org)
+
+Please consider **[donating to our gofundme](https://www.gofundme.com/f/fd997b-help-us)** and spreading the word via the hashtags [#ActInTime](https://twitter.com/hashtag/ActInTime?f=tweets) and [#ClimateClock](https://twitter.com/hashtag/ClimateClock?f=tweets).
+
+[![Team photo](/img/about.jpg)](/img/about.jpg)
+
+Contact us at info@climateclock.world, or leave your email and we'll keep in touch.
+
+<form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  <input type="email" value="" name="EMAIL" placeholder="email" class="required email" id="mce-EMAIL">
+  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+    <input type="text" name="b_2aa3b5c34f535e74090f9098d_e450999d72" tabindex="-1" value="">
+  </div>
+  <input type="submit" value="Stay Updated" name="subscribe" id="mc-embedded-subscribe-2" class="button">
+</form>
+
+####FOR MEDIA INQUIRIES<br>
+info@climateclock.world<br>
+\cc: blair@soundspeedpr.com<br>
+(202)503-6141<br><br>
 :end
 
 
 
-content2:
+content2: 
+####CORE TEAM
+**Gan Golan** - Co-Creator (aka “WHAT?”)
+
+**Andew Boyd** - Co-Creator (aka “Chief Existential Officer”)
+
+**Katie Peyton** - Research Director (aka “VP of Liminal Operations”)
+
+**Adrian Carpenter** - Technical Lead (aka “Secret Weapon”)
+
+####SCIENTIFIC ADVISORS
+* Dr. Ottmar Edenhofer and The Mercator Research Institute on Global Commons and Climate Change ([MCC](https://www.mcc-berlin.net/en.html))
+* Richard Heinberg (Senior Policy Analyst, Post-Carbon Institute)
+* Bill Becker (Executive Director, Presidential Climate Action Project)
+* Omar Yasser Gowayed (Co-Chair, March for Science)
+
+####CREATIVE ALLIES
+* Kristen Jones & Andrew Ginzel - artist-designers of the original Metronome public art installation
+
+####ORGANIZATIONAL PARTNERS
+* March for Science
+* Climate Week
+* NYC Mayor’s Office of Climate
+* Beautiful Trouble
+* 350 NYC
+* Avaaz
+
+####MAKER-CLOCK TEAM
+* Paul Shlok
+* Ariane Schoenwiesner
+:end
+
+
+
+content3: 
+####And a very special thanks to… 
+* Greta Thunberg (who custom-ordered the first hand-held Climate Clock and still carries it with her all over the world)
+* Dan Zarrilli, Chief Resilience Officer, NYC
+* Lucky Tran, March For Science
+* Ingrid Paredes, March For Science
+* Adam Lake, Climate Group
+* Ming Liu, Climate Group
+* Pascal Vollenweider, Avaaz
+* Daniel Boese, Avaaz
+* Soundspeed PR
+* LJ Amsterdam, Spokesperson
+* Athena Soules, Location Scout
+* Greg Schwedock, Technical Assistance
+* Duncan Meisel, Social Media Advisor
+* Jesse Alexander Myerson, Social Media
+* Adam Greenberg, Social Media
+* Becca Richie, Social Media
+* Søren Warburg, Every Kind of Help
+* Brandon Wu, Action Aid US
+* Andy Menconi, Animation
+* Dan Katz, Video
+* Josiah Werning, Design
+* Mark Read, Light Projection
+* Chris Rogy, Light Projection
+* Adela Wagner, Photo & Video
+* Ben Wolf, Video
+* Zack Winestine, Video
+* Josh Bolotsky, Social Media
+* Nathan Freitas, App Developer
+* Rae Abileah 
+* Sarah Bracha Gershuny 
+* Emily Allyn 
+* Matt Leonard 
+* Brad Ian Gans, act.tv
+* Harry Waisbren, act.tv
+* Kelli Daley 
+* Richard Brooks, 350.org
+* Thanu Yakupitiyage, 350.org
+* Monica Weiss
+* Dorian Fulvio  
+* John Ingraham
+* Alan Gunn
+* Iain Keith
+* Mike Bonola
+* John Sellers
+* Dan Zink
+* Aracely Jimenez 
+* A E Marling
+* Nadine Bloch
+* Chelsea Lee Byers
+* Virginia Vitzthum
+* Mahayana Landowne
+* Danica Sapit 
+* And the original Maker Clock Prototype team - Ayodamola Okunseinde, Yvette King, Tega Brain, Sam Levigne
+:end
+
+
+
+
+
+
+old-stuff:
 ![Team photo](/img/about.jpg)
 Here we are. 
 
@@ -202,17 +314,9 @@ Contact us at info@climateclock.world, or leave us your email and we'll keep in 
   </div>
   <input type="submit" value="Stay Updated" name="subscribe" id="mc-embedded-subscribe-2" class="button">
 </form>
-:end
-
-
 
 ###[NYC CLIMATECLOCK FAQ](https://docs.google.com/document/d/1vaFENGiF5Y9j5ZeVwkusuoYA__V0NwbAQ0fYvL898hE/export?format=pdf)
 
-content3:
-####FOR MEDIA INQUIRIES<br>
-info@climateclock.world<br>
-\cc: blair@soundspeedpr.com<br>
-(202)503-6141
 :end
 
 

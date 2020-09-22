@@ -222,6 +222,7 @@ export default {
   border: 1px solid $light;
   padding: .5rem 1.5rem 1.5rem 1.5rem;
   max-height: 100vh;
+  overflow-y: scroll;
   h1 {
     margin-top: 1rem;
     padding: 0;
@@ -233,6 +234,10 @@ export default {
   }
   h3 {
     text-transform: none !important;
+    line-height: 1.2;
+  }
+  ul {
+    padding-inline-start: 1rem;
     line-height: 1.2;
   }
   img {
@@ -251,6 +256,21 @@ export default {
       padding: .15rem .8rem .4rem .8rem;
     }
   }
+  h4#andaveryspecialthanksto + ul {
+    padding-inline-start: 0;
+    li { 
+      list-style: none; 
+      display: inline; 
+    }
+    li:after { 
+      content: " |"; 
+      color: $accent;
+      font-size: 1.1rem;
+      position: relative;
+      top: 2px;
+    }
+    li:last-child:after { content: none; }
+  }
   input[type=email] {
     width: 100%;
     padding: .35rem .7rem;
@@ -259,14 +279,12 @@ export default {
     position: fixed;
     top: 0; left: 0;
     bottom: 0; right: 0;
-    overflow-y: scroll;
     input[type=submit] {
       margin-top: .5rem !important;
     }
   }
 }
 .makerkit {
-  overflow-y: scroll;
   h1 {
     font-size: 2rem;
   }
