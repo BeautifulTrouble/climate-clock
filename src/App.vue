@@ -106,9 +106,9 @@ header {
   flex-direction: column;
   margin: 1rem 0;
   .button.widget {
-    font-size: 1.2rem;
+    //font-size: 1.2rem;
+    //padding: .3rem .5rem .2rem .5rem;
     float: right;
-    padding: .3rem .5rem .2rem .5rem;
     margin: .5rem 0;
   }
   h1 {
