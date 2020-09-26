@@ -46,17 +46,23 @@ type: image
 content: img/newyork_big.jpg
 caption: Monumental Climate Clock goes up in center of New York
 type: image
+link: yourcity
 
 content: https://www.youtube.com/watch?v=m_NqyF9WQRk
 caption: The Climate Clock Explained
 type: youtube
+
+content: img/media_logos.jpg
+caption: Climate Clock NYC Launch "Breaks The Internet"
+type: image
+link: yourcity
 
 content: https://www.youtube.com/watch?v=c2mRGtQzu4I
 caption: Why We Need A Climate Clock
 type: youtube
 
 content: https://www.youtube.com/watch?v=UEp-_tDYI_M
-caption: How To Make A DIY ClimateClock In 20 Seconds (sound on)
+caption: How To Make A DIY Climate Clock In 20 Seconds (sound on)
 type: youtube
 link: make
 
@@ -85,10 +91,10 @@ cta: Put the most important number in the world up everywhere
 
 [ctas]
 title: Know the numbers
-cta: The ClimateClock shows two numbers. The first, in red, is a timer, counting down how long it will take, at current rates of emissions, to burn through our “carbon budget” — the amount of CO2 that can still be released into the atmosphere while limiting global warming to 1.5°C above pre-industrial levels. This is our deadline, the time we have left to take decisive action to keep warming under the 1.5°C threshold. The second number, in green, is tracking the growing % of the world’s energy currently supplied from renewable sources. This is our lifeline. Simply put, we need to get our lifeline to 100% before our deadline reaches 0.
+cta: The Climate Clock shows two numbers. The first, in red, is a timer, counting down how long it will take, at current rates of emissions, to burn through our “carbon budget” — the amount of CO2 that can still be released into the atmosphere while limiting global warming to 1.5°C above pre-industrial levels. This is our deadline, the time we have left to take decisive action to keep warming under the 1.5°C threshold. The second number, in green, is tracking the growing % of the world’s energy currently supplied from renewable sources. This is our lifeline. Simply put, we need to get our lifeline to 100% before our deadline reaches 0.
 :end
 
-content1: The ClimateClock shows two numbers. The first, in red, is a timer, counting down how long it will take, at current rates of emissions, to burn through our “carbon budget” — the amount of CO2 that can still be released into the atmosphere while limiting global warming to 1.5°C above pre-industrial levels. This is our deadline, the time we have left to take decisive action to keep warming under the 1.5°C threshold. The second number, in green, is tracking the growing % of the world’s energy currently supplied from renewable sources. This is our lifeline. Simply put, we need to get our lifeline to 100% before our deadline reaches 0.
+content1: The Climate Clock shows two numbers. The first, in red, is a timer, counting down how long it will take, at current rates of emissions, to burn through our “carbon budget” — the amount of CO2 that can still be released into the atmosphere while limiting global warming to 1.5°C above pre-industrial levels. This is our deadline, the time we have left to take decisive action to keep warming under the 1.5°C threshold. The second number, in green, is tracking the growing % of the world’s energy currently supplied from renewable sources. This is our lifeline. Simply put, we need to get our lifeline to 100% before our deadline reaches 0.
 
 This clock follows the methodology of the carbon clock made by the Mercator [Research Institute on Global Commons and Climate Change (MCC)](https://www.mcc-berlin.net/en/research/co2-budget.html) which uses data from the recent [IPCC Special Report on Global Warming of 1.5°C](https://www.ipcc.ch/report/sr15/). The report states that starting from 2018, a carbon dioxide budget of 420 Gt of CO2 gives us a 67% chance to stay under 1.5°C of warming.
 
@@ -126,7 +132,7 @@ content1: ![Workshop photo](/img/clock.jpg)
 content2:
 The #ClimateClock is an open-source project. Our team in New York that put together Greta’s mobile climate clock used inexpensive electronics (programmable Raspberry Pi circuit board, RGB LED matrix panels, etc.), a wooden casing, and the scientific methodology outlined [here](https://www.mcc-berlin.net/en/research/co2-budget.html) by Berlin’s MCC climate research institute — and so can you! 
 
-####We've developed a step-by-step CLIMATECLOCK
+####We've developed a step-by-step Climate Clock
 ##[Maker Kit](https://github.com/BeautifulTrouble/climate-clock-kit/blob/master/instructions/instructions.md)
 :end
 
@@ -137,7 +143,7 @@ content3:
 ####And download the #ClimateClock Widget.
 :end
 
-button: Make a CLIMATECLOCK
+button: Make a Climate Clock
 link: make
 
 ---
@@ -178,7 +184,7 @@ With our eye on what is arguably “the most important number in the world,” l
 Thank you.
 :end
 
-button: Help make it happen
+button: Put up a clock in your city
 link: yourcity
 []
 
@@ -335,11 +341,11 @@ Contact us at info@climateclock.world, or leave us your email and we'll keep in 
 title: Got a website?
 link: widget
 content: 
-## We'd love for you to spread our CLIMATECLOCK widget across the web. 
+## We'd love for you to spread our Climate Clock widget across the web. 
 
 It's still in its infancy, but you can contribute to the code [on github](https://github.com/BeautifulTrouble/climate-clock-widget).
 
-To add the CLIMATECLOCK widget to your site, add the following HTML:
+To add the Climate Clock widget to your site, add the following HTML:
 
 ``` 
 <script src="https://climateclock.world/widget-v2.js" async></script>
