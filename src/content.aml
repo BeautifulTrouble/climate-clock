@@ -1,5 +1,5 @@
 
-widget_button: Get the app
+widget_button: Get the widget
 app_button: Get the app
 
 
@@ -345,16 +345,26 @@ content:
 
 It's still in its infancy, but you can contribute to the code [on github](https://github.com/BeautifulTrouble/climate-clock-widget).
 
-To add the Climate Clock widget to your site, add the following HTML:
+To add the Climate Clock widget to your site, **add the following HTML**:
 
 ``` 
 <script src="https://climateclock.world/widget-v2.js" async></script>
-<climate-clock></climate-clock>
+<climate-clock />
 ``` 
 
 Some blogging systems will only accept HTML tags from a whitelist, so the `<climate-clock>` tag may be filtered. If your HTML is filtered, ask a website tech how to add HTML directly to your site, or how you can add custom tags. The script is self-contained and will work if hosted on your own server. Download it from us or [build it from source](https://github.com/BeautifulTrouble/climate-clock-widget).
 
 We're working on a design you can customize, so stay tuned or contribute a pull request.
+
+<br><br>
+#### Troubleshooting:
+The Climate Clock widget features an interactive chart which appears when the widget is clicked. Some websites may interfere with the display of this chart, so you may wish to use version 1 which omits the chart (but does appear in a different style).
+
+``` 
+<script src="https://climateclock.world/widget-v1.js" async></script>
+<climate-clock />
+``` 
+
 :end
 []
 
