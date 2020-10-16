@@ -20,7 +20,7 @@ title: Science
 link: science
 type: route
 
-title: Make
+title: Get
 link: make
 type: route
 
@@ -122,29 +122,43 @@ link: science
 
 ---
 
-title: Make your own clock
-cta: The #ClimateClock is an open-source project. Our team in New York that put together Greta’s mobile climate clock used inexpensive electronics (programmable Raspberry Pi circuit board, RGB LED matrix panels, etc.), a wooden casing, and the scientific methodology outlined [here](https://www.mcc-berlin.net/en/research/co2-budget.html) by Berlin’s MCC climate research institute — and so can you! 
+title: Get your own clock
+cta: Action Clocks are perfect for schools, universities and offices. This clock is portable and built for action. Want to have one in your classroom? Want to put it on the desk of your favorite climate-champion? Know a climate denier who needs to get "clocked"? This is the clock for you. There is also a DIY "maker kit" version of the clock available to classrooms and hobbyists on an open-source basis.
 :end
 
-content1: ![Workshop photo](/img/clock.jpg)
+
+content1: 
+#Join the global effort! 
+
+The goal of the #ClimateClock is to make as many clocks available to people, governments and other climate advocates as possible, so that together we can "synchronize our watches" and coordinate global action. 
+
+There are several ways you can participate, and types of clocks, to suit your needs.
+:end
 
 
 content2:
-The #ClimateClock is an open-source project. Our team in New York that put together Greta’s mobile climate clock used inexpensive electronics (programmable Raspberry Pi circuit board, RGB LED matrix panels, etc.), a wooden casing, and the scientific methodology outlined [here](https://www.mcc-berlin.net/en/research/co2-budget.html) by Berlin’s MCC climate research institute — and so can you! 
+<h3 style="margin: .25rem 0;"><a href="yourcity">MONUMENTAL CLOCKS</a></h3>
+Iconic public installations<br><br>
 
-####We've developed a step-by-step Climate Clock
-##[Maker Kit](https://github.com/BeautifulTrouble/climate-clock-kit/blob/master/instructions/instructions.md)
+<h3 style="margin: .25rem 0;"><a href="mobile">DIGITAL CLOCKS</a></h3>
+On your devices and websites<br><br>
+
+<h3 style="margin: .25rem 0;"><a href="mailto:make@climateclock.world">ACTION CLOCKS</a></h3>
+Perfect for schools, universities and offices, this clock is portable and built for action. Want to have one in your classroom? Want to put it on the desk of your favorite climate-champion? Know a climate denier who needs to get "clocked"? We can get you what you need. There is also a DIY "maker kit" version of the clock available to classrooms and hobbyists on an open-source basis.<br><br>If your non-profit or educational institution would like to participate in that way, please [send a message to our maker kit team](mailto:make@climateclock.world).
+
+
 :end
 
 
 content3:
-####In the meantime, share your efforts and results via the [#ActInTime](https://twitter.com/hashtag/actintime?f=tweets) hashtag.
+###Here’s the big secret. 
+The real power of this project is not in the clocks. It is in what we do together. 
 
-####And download the #ClimateClock Widget.
+First step: [Join](http://eepurl.com/gD4Np1) the climate clock network, and tell us a little about you and your team.
 :end
 
-button: Make a Climate Clock
-link: make
+button: Get a Climate Clock
+link: get
 
 ---
 
@@ -177,7 +191,7 @@ A do-it-yourself organizing kit is coming very soon. In the meantime, you can us
 
 If you have specific questions, reach out to our team at [info@climateclock.world](mailto:info@climateclock.world) and let us know how we can support your initiative. We really want to help you make it happen!
 
-Also consider [building a smaller, portable clock](/make), like the one we built for Greta at her request. It's a great first step. (And you can also use it lobby your Senator or MP!)
+Also consider [building a smaller, portable clock](/get), like the one we built for Greta at her request. It's a great first step. (And you can also use it lobby your Senator or MP!)
 :end
 
 
@@ -321,30 +335,8 @@ content3:
 :end
 
 
-
-
-
-
-old-stuff:
-![Team photo](/img/about.jpg)
-Here we are. 
-
-Contact us at info@climateclock.world, or leave us your email and we'll keep in touch.
-
-<form action="https://beautifultrouble.us7.list-manage.com/subscribe/post?u=2aa3b5c34f535e74090f9098d&amp;id=e450999d72" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-  <input type="email" value="" name="EMAIL" placeholder="email" class="required email" id="mce-EMAIL">
-  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-    <input type="text" name="b_2aa3b5c34f535e74090f9098d_e450999d72" tabindex="-1" value="">
-  </div>
-  <input type="submit" value="Stay Updated" name="subscribe" id="mc-embedded-subscribe-2" class="button">
-</form>
-
-###[NYC CLIMATECLOCK FAQ](https://docs.google.com/document/d/1vaFENGiF5Y9j5ZeVwkusuoYA__V0NwbAQ0fYvL898hE/export?format=pdf)
-
-:end
-
-
 ---
+
 
 title: Got a website?
 link: widget
