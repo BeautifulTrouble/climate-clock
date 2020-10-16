@@ -45,37 +45,40 @@
                 <!-- Here are the page-specific modals -->
                 <div :class="{modal: true, makerkit: page == 'make'}">
                   <router-link to="/" class="button close">x</router-link>
+                  <!-- 
+                    Due to a lack of foresight, the CTA "pages" display in one 
+                    way while the other "pages" display in another. Eliminate 
+                    this silly logic when overhauling the site.
+                  -->
+                  <div v-for="(p, i) in content.ctas" :key="i">
+                    <div v-if="page == p.link" class="row">
+                      <div class="col-sm-12">
+                        <h2>{{ p.button }}</h2>
+                      </div>
+                      <!-- Special case all the special features on specific pages -->
+                      <div v-if="p.content" v-html="markdown(p.content)" class="col-sm-12"></div>
+                      <div v-if="p.content1" v-html="markdown(p.content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
+                      <div v-if="p.content2" v-html="markdown(p.content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
+                      <div v-if="p.content3" v-html="markdown(p.content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
+                    </div>
+                  </div>
                   <div v-if="page == 'make'" class="row">
                     <h2>Make a CLIMATECLOCK</h2>
                     <div v-html="markdown(makerkit)" class="col-sm-12"></div>
                   </div>
-                  <div v-else>
-                    <div v-for="(p, i) in content.ctas" :key="i">
-                      <div v-if="page == p.link" class="row">
-                        <div class="col-sm-12">
-                          <h2>{{ p.button }}</h2>
-                        </div>
-                        <!-- Special case all the special features on specific pages -->
-                        <div v-if="p.content" v-html="markdown(p.content)" class="col-sm-12"></div>
-                        <div v-if="p.content1" v-html="markdown(p.content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
-                        <div v-if="p.content2" v-html="markdown(p.content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
-                        <div v-if="p.content3" v-html="markdown(p.content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
-                      </div>
+                  <div v-if="page == 'about'" class="row">
+                    <div class="col-sm-12">
+                      <h2>{{ content.pages[0].title }}</h2>
                     </div>
-                    <div v-if="page == 'about'" class="row">
-                      <div class="col-sm-12">
-                        <h2>{{ content.pages[0].title }}</h2>
-                      </div>
-                      <div v-html="markdown(content.pages[0].content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
-                      <div v-html="markdown(content.pages[0].content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
-                      <div v-html="markdown(content.pages[0].content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
+                    <div v-html="markdown(content.pages[0].content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
+                    <div v-html="markdown(content.pages[0].content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
+                    <div v-html="markdown(content.pages[0].content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
+                  </div>
+                  <div v-if="page == 'widget'" class="row">
+                    <div class="col-sm-12">
+                      <h2>{{ content.pages[1].title }}</h2>
                     </div>
-                    <div v-if="page == 'widget'" class="row">
-                      <div class="col-sm-12">
-                        <h2>{{ content.pages[1].title }}</h2>
-                      </div>
-                      <div v-html="markdown(content.pages[1].content)" class="col-sm-12"></div>
-                    </div>
+                    <div v-html="markdown(content.pages[1].content)" class="col-sm-12"></div>
                   </div>
                 </div>
               </div>
@@ -222,7 +225,7 @@ export default {
   border: 1px solid $light;
   padding: .5rem 1.5rem 1.5rem 1.5rem;
   max-height: 100vh;
-  overflow-y: scroll;
+  //overflow-y: scroll;
   h1 {
     margin-top: 1rem;
     padding: 0;
