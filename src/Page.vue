@@ -225,7 +225,7 @@ export default {
   border: 1px solid $light;
   padding: .5rem 1.5rem 1.5rem 1.5rem;
   max-height: 100vh;
-  //overflow-y: scroll;
+  overflow-y: scroll;
   h1 {
     margin-top: 1rem;
     padding: 0;
