@@ -225,7 +225,6 @@ export default {
   border: 1px solid $light;
   padding: .5rem 1.5rem 1.5rem 1.5rem;
   max-height: 100vh;
-  overflow-y: scroll;
   h1 {
     margin-top: 1rem;
     padding: 0;
@@ -279,6 +278,7 @@ export default {
     padding: .35rem .7rem;
   }
   @include breakpoint($sm) {
+    overflow-y: scroll;
     position: fixed;
     top: 0; left: 0;
     bottom: 0; right: 0;
