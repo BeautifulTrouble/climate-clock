@@ -18,8 +18,7 @@ const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    {path: '/:page(about|yourcity|get|science|widget)', component: Page},
-    {path: '/make', redirect: '/get'},
+    {path: '/:page(about|yourcity|make|get|science|widget)', component: Page},
     {path: '/', component: Page},
     {path: '/*', redirect: '/'},
   ]

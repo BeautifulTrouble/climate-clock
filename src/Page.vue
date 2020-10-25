@@ -258,6 +258,9 @@ export default {
       padding: .15rem .8rem .4rem .8rem;
     }
   }
+  &.makerkit {
+    overflow-y: scroll;
+  }
   h4#andaveryspecialthanksto + ul {
     padding-inline-start: 0;
     li { 
