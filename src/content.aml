@@ -21,7 +21,7 @@ link: science
 type: route
 
 title: Get
-link: make
+link: get
 type: route
 
 title: Join
