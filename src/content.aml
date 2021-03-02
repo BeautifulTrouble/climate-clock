@@ -351,7 +351,6 @@ To add the Climate Clock widget to your site, **add the following HTML**:
 
 ``` 
 <script src="https://climateclock.world/widget-v2.js" async></script>
-<script src="https://climateclock.world/flatten.js" async></script>
 <climate-clock />
 ``` 
 
