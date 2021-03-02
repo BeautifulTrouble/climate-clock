@@ -360,7 +360,7 @@ We're working on a design you can customize, so stay tuned or contribute a pull 
 
 <br><br>
 #### Troubleshooting:
-The Climate Clock widget features an interactive chart which appears when the widget is clicked. Some websites may interfere with the display of this chart, so you may wish to use version 1 which omits the chart (but does appear in a different style).
+If the Climate Clock widget displays incorrectly on your site, you can try an older version with a different appearance.
 
 ``` 
 <script src="https://climateclock.world/widget-v1.js" async></script>
