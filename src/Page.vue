@@ -43,24 +43,26 @@
             <div class="row">
               <div class="col-sm-12 col-md-10 col-md-offset-1">
                 <!-- Here are the page-specific modals -->
-                <div :class="{modal: true, makerkit: page == 'make'}">
+                <div :class="{modal: true, [page]: true}">
                   <router-link to="/" class="button close">x</router-link>
                   <!-- 
-                    Due to a lack of foresight, the CTA "pages" display in one 
-                    way while the other "pages" display in another. Eliminate 
-                    this silly logic when overhauling the site.
+                    Due to a lack of foresight, "pages" from the [cta] section of content.aml display in one 
+                    way while the other "pages" display in another.
                   -->
                   <div v-for="(p, i) in content.ctas" :key="i">
                     <div v-if="page == p.link" class="row">
                       <div class="col-sm-12">
                         <h2>{{ p.button }}</h2>
                       </div>
-                      <!-- Special case all the special features on specific pages -->
                       <div v-if="p.content" v-html="markdown(p.content)" class="col-sm-12"></div>
                       <div v-if="p.content1" v-html="markdown(p.content1)" class="cta cta-0 col-sm-12 col-md-4"></div>
                       <div v-if="p.content2" v-html="markdown(p.content2)" class="cta cta-1 col-sm-12 col-md-4"></div>
                       <div v-if="p.content3" v-html="markdown(p.content3)" class="cta cta-2 col-sm-12 col-md-4"></div>
                     </div>
+                  </div>
+                  <!-- Conditional rendering for each page -->
+                  <div v-if="page == 'story'" class="row">
+                    <div v-html="markdown(story)" class="col-sm-12"></div>
                   </div>
                   <div v-if="page == 'make'" class="row">
                     <h2>Make a CLIMATECLOCK</h2>
@@ -93,11 +95,13 @@
 <script>
 import content from './content.aml'
 import makerkit from '../climate-clock-kit/instructions/instructions.md'
+import story from './story.md'
 
 export default {
   data: () => ({
     content: content,
     makerkit: makerkit,
+    story: story,
     // TODO: sheesh I'm tired
     clock0: false,
     clock1: false,
@@ -257,7 +261,7 @@ export default {
       padding: .15rem .8rem .4rem .8rem;
     }
   }
-  &.makerkit {
+  &.story, &.make {
     overflow-y: scroll;
   }
   h4#andaveryspecialthanksto + ul {
@@ -289,22 +293,21 @@ export default {
     }
   }
 }
-.makerkit {
+.story, .make {
   h1 {
     font-size: 2rem;
   }
   p {
     font-size: 1rem;
   }
+  img {
+    padding-right: 0;
+  }
   p:first-of-type img, p:last-of-type img {
     width: 100% !important;
   }
   blockquote:first-of-type p {
     font-size: 1rem !important;
-  }
-  img {
-    width: 50% !important;
-    padding-right: 0;
   }
   ul {
     padding-inline-start: 1rem;
@@ -314,6 +317,11 @@ export default {
     border: 1px solid $light;
     margin-inline-start: 0;
     margin-inline-end: 0;
+  }
+}
+.make {
+  img {
+    width: 50% !important;
   }
 }
 </style>

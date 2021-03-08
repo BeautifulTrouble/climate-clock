@@ -118,7 +118,7 @@ header {
     }
   }
   menu {
-    margin: 0 0 3rem 0
+    margin: 0;
   }
   .mobile-menu {
     position: relative;
@@ -140,14 +140,14 @@ header {
 menu {
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   @include breakpoint($sm) {
     flex-direction: column;
   }
   h3 {
     text-transform: uppercase;
     color: $dark;
-    margin: 0 3.5vw;
+    //margin: 0 3.5vw;
     @include breakpoint($sm) {
       margin: 0;
       font-size: 3rem;

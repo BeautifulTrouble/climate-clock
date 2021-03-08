@@ -20,6 +20,10 @@ title: Science
 link: science
 type: route
 
+title: Our Story
+link: story
+type: route
+
 title: Get
 link: get
 type: route
