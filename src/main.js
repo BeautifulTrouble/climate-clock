@@ -7,7 +7,6 @@ import Youtube from './Youtube.vue'
 
 import VueCarousel from 'vue-carousel'
 import VueSmoothScroll from 'vue2-smooth-scroll'
-import VueScrollReveal from 'vue-scroll-reveal'
 import showdown from 'showdown'
 import showdownTargetBlank from 'showdown-target-blank'
 
@@ -30,17 +29,9 @@ Vue.config.ignoredElements = ['climate-clock']
 
 Vue.use(VueCarousel)
 Vue.use(VueSmoothScroll)
-Vue.use(VueScrollReveal)
 Vue.use(Router)
 
 Vue.component('youtube-player', Youtube)
-
-// Is this against the law?
-Vue.prototype.reveal = {
-  origin: 'left', 
-  distance: '50px', 
-  opacity: .2,
-}
 
 Vue.mixin({
   methods: {

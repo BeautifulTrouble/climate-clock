@@ -216,7 +216,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 1; // Without which, scroll-reveal will place footer above
 }
 .modal {
   pointer-events: auto;
