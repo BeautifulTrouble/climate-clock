@@ -13,7 +13,7 @@ Eighty feet across, and towering four stories above New York’s Union Square, t
 To stay under 1.5°C warming, and prevent the worst effects of climate change from becoming irreversible, the Clock was telling us we have an alarmingly short 7 years, 102 days, and counting to make a radical transition off of fossil fuels. It [struck a nerve](https://www.nytimes.com/2020/09/20/arts/design/climate-clock-metronome-nyc.html) across the world, and quickly established itself as an iconic reference point for the urgent need for climate action.
 
 
-The brainchild of art-fixer Katie Peyton Hofstadter, tech maestro Adrian Carpenter, climate activists Andrew Boyd and Gan Golan, and a [clutch supporting team](/about) including leading scientists, the Mayor’s office, and a host of creatives, the Climate Clock was clearly an idea, ahem, whose time had come. 
+The brainchild of climate activists Gan Golan and Andrew Boyd, art-fixer Katie Peyton Hofstadter, tech maestro Adrian Carpenter, and a [clutch supporting team](/about) including leading scientists, the Mayor’s office, and a host of creatives, the Climate Clock was clearly an idea, ahem, whose time had come. 
 
 
 To the outside eye it may have looked like an obvious thing to do. But this was far from the first attempt by this team to launch their clock, nor was it the first climate clock. 
