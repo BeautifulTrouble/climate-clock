@@ -51,6 +51,11 @@ caption: Greta with clock, before UN speech, Sept., 2019
 type: image
 
 [slides]
+content: img/glasgow_big.jpg
+caption: Glasgow hosts Climate Clock in lead up to COP26
+type: image
+link: yourcity
+
 content: img/newyork_big.jpg
 caption: Monumental Climate Clock goes up in center of New York
 type: image
@@ -89,8 +94,8 @@ title: New York 2020
 image: newyork.jpg
 description: ###Put a #ClimateClock up in your city.
 
-title: Paris 2021
-image: paris.jpg
+title: Glasgow 2021
+image: glasgow.jpg
 description: ###We have to #ActInTime.
 []
 
