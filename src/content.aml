@@ -56,6 +56,16 @@ caption: Glasgow hosts Climate Clock in lead up to COP26
 type: image
 link: yourcity
 
+content: img/rome_big.jpg
+caption: GSE-led team installs Climate Clock in Rome, June 2021
+type: image
+link: yourcity
+
+content: img/seoul_big.jpg
+caption: Korea Herald, Seoul South Korea — Earth Day 2021
+type: image
+link: yourcity
+
 content: img/newyork_big.jpg
 caption: Monumental Climate Clock goes up in center of New York
 type: image
@@ -88,7 +98,7 @@ type: youtube
 [clocks]
 title: Berlin 2019
 image: berlin.jpg
-description: ###\#ClimateClock [erected](https://www.mcc-berlin.net/en/news/information/information-detail/article/40-metre-carbon-clock-high-above-berlin.html) in Berlin September 18, 2019.
+description: ###\#ClimateClock erected in Berlin September 18, 2019.
 
 title: New York 2020
 image: newyork.jpg
