@@ -104,8 +104,8 @@ title: New York 2020
 image: newyork.jpg
 description: ###Put a #ClimateClock up in your city.
 
-title: Glasgow 2021
-image: glasgow.jpg
+title: Seoul 2021
+image: seoul.jpg
 description: ###We have to #ActInTime.
 []
 
@@ -444,4 +444,5 @@ footer: ClimateClock.world is powered by climate scientists, artists, educators,
 `fb:` [`theclimateclock`](https://www.facebook.com/theclimateclock)<br>
 `em:` [`info@climateclock.world`](mailto:info@climateclock.world)
 :end 
+
 
