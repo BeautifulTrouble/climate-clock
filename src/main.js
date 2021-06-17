@@ -17,7 +17,7 @@ const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    {path: '/jobs', redirect: () => window.location.replace('https://jobs.climateclock.world')},
+    {path: '/jobs', redirect: () => window.location.replace('https://jobs.climateclock.world/jobs')},
     {path: '/:page(about|yourcity|make|story|get|science|widget)', component: Page},
     {path: '/', component: Page},
     {path: '/*', redirect: '/'},
